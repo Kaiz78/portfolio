@@ -93,7 +93,7 @@ function Project()  {
             )}
             {mainProjects.length !== 0 && (
                 <>
-                    <div className="card-group gap-2 justify-content-center">
+                    <div className="d-flex gap-2 justify-content-center">
                         {mainProjects.map(function ({
                             id,
                             image,
@@ -105,7 +105,7 @@ function Project()  {
 
 
                             return (
-                                <div key={id} className="card p-3 col-md-4">
+                                <div key={id} className="card">
                                     <div>
                                     {/* <img src={image} alt={name} /> */}
                                         <div>

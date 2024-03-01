@@ -128,6 +128,14 @@ body {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
+.d-flex{
+  display: flex;
+ 
+
+  padding: 1rem;
+
+}
+
 // media 375
 @media (max-width: 775px) {
   .card-home{
@@ -135,6 +143,13 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+  
+  .d-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 }
 
 .btn{
@@ -571,7 +586,8 @@ color: var(--color-default);
   border-radius: 8px;
   padding: 16px;
   margin: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  // min-width: 300px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
 }
 
 /* Style pour l'image à l'intérieur de la carte */

@@ -35,31 +35,30 @@ const StyledCardComponent = styled.div`
 
 export default function StyledCard({ image, name, description, url, demo }: { image: string, name: string, description: string, url: string, demo: string }) {
   return (
-    <StyledCardComponent>
-      <Card>
-        <Card.Img
-          variant="top"
-          src={image ? image : GH}
-          alt={name}
-          className="mx-auto"
-        />
-        <Card.Body className="overflow-auto text-center">
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>{description}</Card.Text>
-          {demo !== "" && demo !== null ? (
-            <Card.Link href={demo}>
-              {"Live Demo "}
-              <Icon icon="icon-park-outline:code-computer" />
-            </Card.Link>
-          ) : null}
-        </Card.Body>
-        <Card.Footer className="text-center">
-          <Card.Link href={url}>
-            {"View on GitHub "}
-            <Icon icon="icomoon-free:github" />
-          </Card.Link>
-        </Card.Footer>
-      </Card>
-    </StyledCardComponent>
+
+      <div className="">
+        <img src={image} alt={name} />
+        <div>
+            <h3 className='text-center'>{name}</h3>
+            <div className='underline-2'></div>
+            {
+              description && (
+                  <p className="card-body"
+                  >{description}</p>
+
+              ) || (
+                    <p className="card-body"
+                    >Pas de description</p>
+              )
+            }
+            <div className='d-flex justify-content-center'>
+                <a href={url} target="_blank" rel="noreferrer" className='btn btn-primary'>
+                    Voir
+                </a>
+            </div>
+        </div>
+      </div>
+
+
   );
 }

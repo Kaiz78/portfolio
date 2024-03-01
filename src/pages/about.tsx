@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+
 import styled from "styled-components";
 
 const StyledAboutMe = styled.section`

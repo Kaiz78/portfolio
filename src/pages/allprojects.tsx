@@ -139,104 +139,118 @@ export default function AllProjects() {
   } else {
     return (
       <>
-        <StyledAboutMe>
-
+        <StyledAboutMe className="section">
+        <div className="container">
+          <div className="d-flex">
             <Title>
-              <h2 className="text-center">Tous les projets</h2>
+              <h2>Tous les projets</h2>
               <div className="underline"></div>            
             </Title>
-            <Container>
-              <InputGroup className="mx-auto mb-3">
-                <InputGroup.Text id="search">
-                  <Icon icon="ic:round-search" />
-                </InputGroup.Text>
-                <FormControl
-                  placeholder="Project name"
-                  aria-label="Search projects"
-                  aria-describedby="search"
-                  onChange={(e) => setSearchInput(e.currentTarget.value)}
+          </div>
+          <InputGroup className=" row mx-auto mb-3 p-3">
+
+            <FormControl
+              placeholder="Project name"
+              aria-label="Search projects"
+              aria-describedby="search"
+              onChange={(e) => setSearchInput(e.currentTarget.value)}
+            />
+          </InputGroup>
+          <div className="row">
+            {searchInput.length > 0
+              ? filteredResults.map(function ({
+                  id,
+                  image,
+                  name,
+                  description,
+                  html_url,
+                  homepage,
+                }) {
+                  return (
+                    <div  className="card p-3 col-md-4" key={id}>
+                      <StyledCard 
+                        image={image}
+                        name={name}
+                        description={description}
+                        url={html_url}
+                        demo={homepage}
+                      /> 
+                    </div>
+                  );
+                })
+              : filteredResults.map(function ({
+                  id,
+                  image,
+                  name,
+                  description,
+                  html_url,
+                  homepage,
+                }) {
+                  return (
+                    <>
+                    <div key={id} className="col-lg-4 col-md-6">
+                                    <div className="card">
+                                    {/* <img src={image} alt={name} /> */}
+                                        <div>
+                                            <h3 className='text-center'>{name}</h3>
+                                            <div className='underline-2'></div>
+                                            {
+                                             description && (
+                                                 <p className="card-body"
+                                                 >{description}</p>
+
+                                             ) || (
+                                                    <p className="card-body"
+                                                    >Pas de description</p>
+                                             )
+                                            }
+                                            <div className='d-flex justify-content-center'>
+                                                <a href={html_url} target="_blank" rel="noreferrer" className='btn btn-primary'>
+                                                    Voir
+                                                </a>
+                                            </div>
+                                            {homepage && <button>Demo</button>}
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                    </>
+                  );
+                })}
+          </div>
+          <div className=" container d-flex justify-content-center mt-4">
+            {pageItems.length <= 2 ? (
+              <Pagination size="lg" className="mb-4">
+                {pageItems}
+              </Pagination>
+            ) : (
+              <Pagination className="mb-5">
+                <Pagination.Prev
+                  onClick={() =>
+                    activePage === 1
+                      ? setActivePage(pageItems.length)
+                      : setActivePage(activePage - 1)
+                  }
                 />
-              </InputGroup>
-              <Row
-                xs={1}
-                md={2}
-                lg={3}
-                className="g-4 justify-content-center row"
-              >
-                {searchInput.length > 0
-                  ? filteredResults.map(function ({
-                      id,
-                      image,
-                      name,
-                      description,
-                      html_url,
-                      homepage,
-                    }) {
-                      return (
-                        <Col key={id}>
-                          <StyledCard 
-                            image={image}
-                            name={name}
-                            description={description}
-                            url={html_url}
-                            demo={homepage}
-                          /> 
-                        </Col>
-                      );
-                    })
-                  : filteredResults.map(function ({
-                      id,
-                      image,
-                      name,
-                      description,
-                      html_url,
-                      homepage,
-                    }) {
-                      return (
-                        <Col key={id}>
-                          <StyledCard
-                            image={image}
-                            name={name}
-                            description={description}
-                            url={html_url}
-                            demo={homepage}
-                          />
-                        </Col>
-                      );
-                    })}
-              </Row>
-              <Container className="d-flex justify-content-center mt-4">
-                {pageItems.length <= 2 ? (
-                  <Pagination size="lg" className="mb-4">
-                    {pageItems}
-                  </Pagination>
-                ) : (
-                  <Pagination className="mb-5">
-                    <Pagination.Prev
-                      onClick={() =>
-                        activePage === 1
-                          ? setActivePage(pageItems.length)
-                          : setActivePage(activePage - 1)
-                      }
-                    />
-                    {pageItems[0]}
-                    <Pagination.Ellipsis />
-                    <Pagination.Item active={true}>
-                      {activePage}
-                    </Pagination.Item>
-                    <Pagination.Ellipsis />
-                    {pageItems[pageItems.length - 1]}
-                    <Pagination.Next
-                      onClick={() =>
-                        activePage === pageItems.length
-                          ? setActivePage(1)
-                          : setActivePage(activePage + 1)
-                      }
-                    />
-                  </Pagination>
-                )}
-              </Container>
-            </Container>
+                {pageItems[0]}
+                <Pagination.Ellipsis />
+                <Pagination.Item active={true}>
+                  {activePage}
+                </Pagination.Item>
+                <Pagination.Ellipsis />
+                {pageItems[pageItems.length - 1]}
+                <Pagination.Next
+                  onClick={() =>
+                    activePage === pageItems.length
+                      ? setActivePage(1)
+                      : setActivePage(activePage + 1)
+                  }
+                />
+              </Pagination>
+            )}
+          </div>
+        </div>
+
 
         </StyledAboutMe>
       </>
