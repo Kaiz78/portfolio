@@ -17,6 +17,42 @@ body {
   font-size: calc(0.7em + 0.4vw);  
 }
 
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
 
 .heading_h1 {
   font-size: 4.375rem;
@@ -520,6 +556,76 @@ color: var(--color-default);
 }
 
 
+
+
+
+
+
+
+
+
+
+/* Style pour la carte (card) */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour l'image à l'intérieur de la carte */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Style pour le contenu à l'intérieur de la carte */
+.card div {
+  margin-top: 12px;
+}
+
+/* Style pour le titre (h3) à l'intérieur de la carte */
+.card h3 {
+  color: #333;
+}
+
+/* Style pour le paragraphe (p) à l'intérieur de la carte */
+.card p {
+  color: #555;
+}
+
+/* Style pour les boutons à l'intérieur de la carte */
+.card button {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: #007bff; /* Couleur bleue par défaut de Bootstrap */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+/* Style pour le bouton Demo (s'il est présent) */
+.card button.Demo {
+  background-color: #28a745; /* Couleur verte par défaut de Bootstrap */
+}
+
+/* Style au survol des boutons */
+.card button:hover {
+  background-color: #5098e4; /* Couleur bleu foncé par défaut de Bootstrap */
+  color: #e0e0e0
+}
+
+.card-body{
+  height:100px;
+  overflow: auto;
+}
 
 
 

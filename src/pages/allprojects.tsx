@@ -16,25 +16,27 @@ import {
   Row,
 } from "react-bootstrap";
 
+const StyledAboutMe = styled.section`
 
-
-const StyledSection = styled.section`
-  min-height: calc(100vh - var(--min-footer-height) - var(--nav-height));
-
-  .input-group {
-    max-width: 90vw;
-  }
-
-  .row {
-    min-height: var(--card-height);
-  }
-
-  @media screen and (min-width: 800px) {
-    .input-group {
-      width: 75%;
-    }
-  }
+margin-bottom: 10rem;
+p {
+  font-size: 1.25rem;
+}
+.img {
+  width: 18rem;
+  height: 18rem;
+}
 `;
+
+const Title = styled.div`
+  display: inline-block;
+  margin: 0 auto;
+  font-family: "Permanent Marker";
+  text-align: center;
+`;
+
+
+
 
 export default function AllProjects() {
   const [searchInput, setSearchInput] = React.useState("");
@@ -137,11 +139,12 @@ export default function AllProjects() {
   } else {
     return (
       <>
-        <main>
-          <StyledSection className="d-flex flex-column justify-content-center">
-            <Container className="d-flex">
-              All projects
-            </Container>
+        <StyledAboutMe>
+
+            <Title>
+              <h2 className="text-center">Tous les projets</h2>
+              <div className="underline"></div>            
+            </Title>
             <Container>
               <InputGroup className="mx-auto mb-3">
                 <InputGroup.Text id="search">
@@ -234,10 +237,8 @@ export default function AllProjects() {
                 )}
               </Container>
             </Container>
-          </StyledSection>
-        </main>
-        {/* <BackToTop home={"Home"} /> */}
-        {/* <Footer /> */}
+
+        </StyledAboutMe>
       </>
     );
   }

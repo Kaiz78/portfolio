@@ -11,14 +11,16 @@ import {
   } from "../services/allProjectsSlice";
 
 
-const StyledAboutMe = styled.section`
-p {
-font-size: 1.25rem;
-}
-.img {
-width: 18rem;
-height: 18rem;
-}
+  const StyledAboutMe = styled.section`
+
+  margin-bottom: 10rem;
+  p {
+    font-size: 1.25rem;
+  }
+  .img {
+    width: 18rem;
+    height: 18rem;
+  }
 `;
 
 
@@ -56,6 +58,15 @@ function Project()  {
         },
         [data]
       );
+
+
+      const [showFullDescription, setShowFullDescription] = useState(false);
+
+      const toggleDescription = () => {
+        setShowFullDescription(!showFullDescription);
+      };
+
+
     return (
     <>
         <StyledAboutMe className="section">
@@ -82,7 +93,7 @@ function Project()  {
             )}
             {mainProjects.length !== 0 && (
                 <>
-                    <div className="row gap-2  justify-content-center">
+                    <div className="card-group gap-2 justify-content-center">
                         {mainProjects.map(function ({
                             id,
                             image,
@@ -91,35 +102,47 @@ function Project()  {
                             html_url,
                             homepage,
                         }) {
+
+
                             return (
-                                <div key={id} className=" card p-3  col-md-4">
+                                <div key={id} className="card p-3 col-md-4">
                                     <div>
-                                        <img src={image} alt={name} />
+                                    {/* <img src={image} alt={name} /> */}
                                         <div>
-                                            <h3>{name}</h3>
-                                            <p>{description}</p>
-                                            <button >GitHub</button>
-                                            {homepage && (
-                                                <button >Demo</button>
-                                            )}
+                                            <h3 className='text-center'>{name}</h3>
+                                            <div className='underline-2'></div>
+                                            {
+                                             description && (
+                                                 <p className="card-body"
+                                                 >{description}</p>
+
+                                             ) || (
+                                                    <p className="card-body"
+                                                    >Pas de description</p>
+                                             )
+                                            }
+                                            <div className='d-flex justify-content-center'>
+                                                <a href={html_url} target="_blank" rel="noreferrer" className='btn btn-primary'>
+                                                    Voir
+                                                </a>
+                                            </div>
+                                            {homepage && <button>Demo</button>}
                                         </div>
                                     </div>
                                 </div>
+                              
                             );
                         })}
                     </div>
                     {data.length > 3 && (
-                        <div className="text-center mt-5">
+                        <div className=" text-center mt-5">
                             <Link to="/All-Projects">
-                                <button>
-                                    All Projects
+                                <button className='btn btn-primary'>
+                                    Voir tous les projets
                                 </button>
                             </Link>
                         </div>
                     )}
-                    <br />
-                    <br />
-                    <br />
                 </>
             )}
         </div>

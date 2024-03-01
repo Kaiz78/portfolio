@@ -55,22 +55,27 @@ function Home()  {
               </div>
               <div className="" style={
                   {
-                      width: "80%",
-                      
+                      width: "80%",   
                   }
               }>
 
-                <p>Hi 👋,</p>
-                <p>I'm {name}</p>
-                <p>A 
+                <p className=""
+                style={
+                  {
+                    fontSize: "38px",
+                  }
+                }
+                >Salut, <span className="wave ">👋</span></p>
+                <p>Je m'appelle {name}</p>
+                <p>Je suis&nbsp;  
                   <span>
-                    <TypeAnimation
+                     <TypeAnimation
                     sequence={[
-                        'Enginner', // Types 'One'
+                        'développeur frontend', // Types 'One'
                         2000, // Waits 1s
-                        'Developer', // Deletes 'One' and types 'Two'
+                        'développeur backend', // Deletes 'One' and types 'Two'
                         2000, // Waits 2s
-                        'Researcher', // Types 'Three' without deleting 'Two'
+                        'chef de projet', // Types 'Three' without deleting 'Two'
                         3000,
                         ]}
                         wrapper="span"
