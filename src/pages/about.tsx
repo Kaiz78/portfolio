@@ -1,8 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 
-
 const StyledAboutMe = styled.section`
+
+  margin-bottom: 10rem;
   p {
     font-size: 1.25rem;
   }
@@ -11,7 +12,6 @@ const StyledAboutMe = styled.section`
     height: 18rem;
   }
 `;
-
 
 
 const Title = styled.div`
@@ -29,7 +29,6 @@ let bio = 'I am a software engineer with a passion for learning and teaching. I 
 function About()  {    
     return (
     <>
-      <br /><br />
          <StyledAboutMe className="section">
         <div>
           <div className="d-flex">

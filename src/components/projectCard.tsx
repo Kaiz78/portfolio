@@ -25,12 +25,7 @@ const ProjectCard = ({
   return (
     <div className="card mb-5">
       <div className="card-content">
-        <div className="" style={
-          {
-            width: '100%',
-            display: 'flex',
-          }
-        }>
+        <div className="d-flex" >
           <div className="my-1">
             <a href={projectLink} target="_blank">
               <img alt={`${projectName} logo`} src={logoSrc} className="responsive-img center-block" />
@@ -38,7 +33,7 @@ const ProjectCard = ({
           </div>
           <div className="mx-2">
             <p>
-              <span className="card-tite">
+              <span className="card-name">
                 <a href={projectLink} target="_blank" className="teal-text hoverline">
                   {projectName}
                 </a>

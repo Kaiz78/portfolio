@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { filteredProjects } from "../services/data";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 import { useSelector } from "react-redux";
 import {
@@ -8,6 +9,27 @@ import {
     selectError,
     selectIsLoading,
   } from "../services/allProjectsSlice";
+
+
+const StyledAboutMe = styled.section`
+p {
+font-size: 1.25rem;
+}
+.img {
+width: 18rem;
+height: 18rem;
+}
+`;
+
+
+
+const Title = styled.div`
+display: inline-block;
+margin: 0 auto;
+font-family: "Permanent Marker";
+text-align: center;
+`;
+
 
 function Project()  {    
 
@@ -36,16 +58,17 @@ function Project()  {
       );
     return (
     <>
-         <h1 className='text-info'>Project</h1>  
-         <div>
-            <div className="d-flex">
-                <h2>Projects</h2>
-            </div>
+        <StyledAboutMe className="section">
+            <div className='container'>
+                <div className="d-flex container">
+                    <Title>
+                    <h2>Projet</h2>
+                    <div className="underline"></div>            
+                    </Title>
+                </div>
+                <div>
+            
             <div>
-            <div className="d-flex">
-                <h2>Projects</h2>
-                <div className="underline"></div>
-            </div>
             {isLoading && (
                 <div className="d-flex">
                     {/* Utilisez ici votre composant Loading personnalisé */}
@@ -59,7 +82,7 @@ function Project()  {
             )}
             {mainProjects.length !== 0 && (
                 <>
-                    <div className="row g-4 justify-content-center">
+                    <div className="row gap-2  justify-content-center">
                         {mainProjects.map(function ({
                             id,
                             image,
@@ -69,7 +92,7 @@ function Project()  {
                             homepage,
                         }) {
                             return (
-                                <div key={id} className="col-md-4">
+                                <div key={id} className=" card p-3  col-md-4">
                                     <div>
                                         <img src={image} alt={name} />
                                         <div>
@@ -94,10 +117,16 @@ function Project()  {
                             </Link>
                         </div>
                     )}
+                    <br />
+                    <br />
+                    <br />
                 </>
             )}
         </div>
         </div>
+            </div>
+        </StyledAboutMe>
+        
     </>
     )
 }

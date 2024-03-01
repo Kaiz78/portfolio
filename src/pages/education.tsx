@@ -5,6 +5,8 @@ import ProjectCard from "../components/projectCard";
 
 
 const StyledAboutMe = styled.section`
+
+  margin-bottom: 10rem;
   p {
     font-size: 1.25rem;
   }
@@ -13,6 +15,7 @@ const StyledAboutMe = styled.section`
     height: 18rem;
   }
 `;
+
 
 
 
@@ -33,7 +36,6 @@ let name = 'Amine Mokhtari';
 function Education()  {    
     return (
     <>
-      <br /><br />
          <StyledAboutMe className="section">
         <Container>
           <Container className="d-flex">
@@ -46,7 +48,7 @@ function Education()  {
 
 
           <ProjectCard
-  logoSrc="/assets/img/exp-zhiffy-logo-1.webp"
+  logoSrc="/vite.svg"
   projectLink="https://www.zhiffy.com/"
   projectName="Zhiffy"
   role="Software Engineer"

@@ -22,6 +22,7 @@ export const fetchGitHubInfo = createAsyncThunk(
                 return res;
             });
             const data = await response.json();
+             data.name = "Amine Mokhtari"
             return data;
         } catch (err) {
             return rejectWithValue(

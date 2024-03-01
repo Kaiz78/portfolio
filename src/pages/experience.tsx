@@ -5,6 +5,8 @@ import ProjectCard from "../components/projectCard";
 
 
 const StyledAboutMe = styled.section`
+
+  margin-bottom: 10rem;
   p {
     font-size: 1.25rem;
   }
@@ -33,7 +35,7 @@ let name = 'Amine Mokhtari';
 function Experience()  {    
     return (
     <>
-      <br /><br />
+
          <StyledAboutMe className="section">
         <Container>
           <Container className="d-flex">
