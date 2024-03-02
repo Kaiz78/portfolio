@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import { FaRegFilePdf } from "react-icons/fa";
+
+import { useSelector } from "react-redux";
+import {translate} from "../i18n";
+import { RootState } from "../store/store";
+
 const StyledAboutMe = styled.section`
 
   margin-bottom: 10rem;
@@ -21,26 +26,30 @@ const Title = styled.div`
 `;
 
 
-function CV()  {    
+function CV()  {   
+  
+  const {language} = useSelector((state: RootState) => state.lang);
+  let content = translate('page', language) as any
+
     return (
     <>
          <StyledAboutMe className="section">
         <div>
           <div className="d-flex">
             <Title>
-              <h2>CV</h2>
+              <h2>{content.cv.title}</h2>
               <div className="underline"></div>            
             </Title>
           </div>
-          <div className="d-flex flex-column text-center p-5">
-              <div className="card">
+          <div className="d-flex flex-column text-center">
+              <div className="card mx-auto w-75">
                 <div className="text-center">
-                    <a href="/vite.svg" target="_blank" >
+                    <a href="/cv.pdf" target="_blank" >
                         <FaRegFilePdf  fontSize={44}/>
+                    <br />
+                    <br />
+                    <p className="text-decoration-none">{content.cv.msg_1}</p>
                     </a>
-                    <br />
-                    <br />
-                    <p>Cliquez pour téléchargez mon CV</p>
                 </div>
               </div>
           </div>

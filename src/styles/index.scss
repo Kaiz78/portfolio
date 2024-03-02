@@ -99,7 +99,7 @@ body {
   border-radius: 0.25rem;
   background:  #000;
   margin: 0 auto 1.5rem auto;
-  background: linear-gradient(to left, #d43838, #171414)
+  background: linear-gradient(to right, #342323 0%, rgba(37, 234, 245, 0.6))
 }
 
 .underline-2 {
@@ -108,7 +108,7 @@ body {
   min-width: 3rem;
   border-radius: 0.15rem;
   margin: 0 auto 1.5rem auto;
-  background: linear-gradient(to left, #d43838, #171414)
+  background: linear-gradient(to right, #342323 0%, rgba(37, 234, 245, 0.6))
 }
 
 
@@ -154,8 +154,18 @@ body {
 
 .btn{
   font-size: calc(0.7em + 0.4vw); 
+  background :  #342323 0%
 }  
 
+.btn:hover{
+  background : #60a1a5
+
+}
+
+.font-italic{
+  font-style: italic;
+
+}
 
 a {
   color: #004d40;
@@ -175,7 +185,71 @@ a.hoverline:hover {
   border-bottom: 3px solid #004d40 !important;
 }
 
+.col .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #362828;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
 
+.col .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #362828 transparent transparent transparent;
+}
+
+.col:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+// .star-shine {
+//   position: relative;
+//   font-size: calc(0.7em + 0.6vw);
+// }
+
+// .star-shine::before {
+//   content: '\2605'; /* Code de caractère pour une étoile pleine */
+//   position: absolute;
+//   top: -18px;
+//   left: 10px;
+//   width: 100%;
+//   height: 100%;
+//   color: #ffd700; /* Couleur de l'étoile (jaune dans cet exemple) */
+//   opacity: 0;
+//   // transform: translateY(-0%);
+//   z-index: 2;
+//   animation: shine 5s infinite;
+// }
+
+// @keyframes shine {
+//   0%, 100% {
+//     opacity: 1;
+//     transform: translateY(85%);
+//   }
+//   50% {
+//     opacity: 1;
+//     color: #a6963d;
+//     transform: translateY(85%);
+//   }
+// }
 
 
 
@@ -479,7 +553,7 @@ ul{
     width: 100%;
     height: 100%;
     transform: scaleX(0);
-    background-color: #b6a5d8;
+    background-color: #75dde2;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
     transform-origin: left;
@@ -652,22 +726,11 @@ color: var(--color-default);
 
 
 
-
+.text-decoration-none{
+  text-decoration: none;
+}
   
 
 
   
-
-
-  
-
-  
-
-
-
-
-
-
-
-
 

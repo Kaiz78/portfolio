@@ -12,40 +12,39 @@ import Project from './pages/project';
 import Cv from './pages/cv';
 import Experience from './pages/experience';
 import SideBar from './components/sidebar';
-import React, {useEffect} from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import  {useEffect} from 'react';
+import { useDispatch } from "react-redux";
 import {
   fetchGitHubInfo,
-  selectError,
-  selectIsLoading,
-} from "./services/homeSlice";
-import { fetchGitHubReops } from './services/allProjectsSlice';
+} from "./store/reducers/homeSlice";
+import { fetchGitHubReops } from './store/reducers/allProjectsSlice';
 import AllProjects from './pages/allprojects';
 import Navbar from './components/navbar';
 
 
 function App() {
   let name = "Portfolio";
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
+  // const isLoading = useSelector(selectIsLoading);
+  // const error = useSelector(selectError);
   const dispatch = useDispatch();
+
+  
 
   useEffect(
     function () {
-      
       dispatch(fetchGitHubInfo() as any);
       dispatch(fetchGitHubReops() as any);
     },
     [dispatch]
+
   );
+
 
   return (
     <>
-
     <BrowserRouter>
      <HelmetProvider>
-    <Navbar />
-    
+      <Navbar />
       <Routes>
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/" element={<SideBar components={Home} name={name} />} />
@@ -53,6 +52,7 @@ function App() {
         <Route path="/education" element={<SideBar components={Education}  name={name}  />} />
         <Route path="/experience" element={<SideBar components={Experience}  name={name}  />} />
         <Route path="/project" element={<SideBar components={Project}  name={name}  />} />
+    
         <Route path="/skill" element={<SideBar components={Skill}  name={name}  />} />
         <Route path="/cv" element={<SideBar components={Cv}  name={name}  />} />
         <Route path="/contact" element={<SideBar components={Contact}  name={name}  />} />

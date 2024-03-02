@@ -5,6 +5,7 @@ interface ProjecCard{
   projectName: string,
   role: string,
   responsibilities: string[],
+  subject: string,
   tools: string,
   duration: string,
   location: string
@@ -18,6 +19,7 @@ const ProjectCard = ({
   projectName,
   role,
   responsibilities,
+  subject,
   tools,
   duration,
   location
@@ -28,7 +30,7 @@ const ProjectCard = ({
         <div className="d-flex" >
           <div className="my-1">
             <a href={projectLink} target="_blank">
-              <img alt={`${projectName} logo`} src={logoSrc} className="responsive-img center-block" />
+              <img alt={`${projectName} logo`} src={logoSrc} className="responsive-img center-block" width={80}  />
             </a>
           </div>
           <div className="mx-2">
@@ -47,10 +49,13 @@ const ProjectCard = ({
         
         <ul>
           {responsibilities.map((responsibility, index) => (
-            <li key={index}>{responsibility}</li>
+            <li key={index}>
+              {/* {responsibility} */}
+              <strong>{responsibility.split(':')[0]}:</strong> {responsibility.split(':')[1]}
+              </li>
           ))}
           <li>
-            <b>Tools:</b> {tools}
+            <b>{subject}</b> {tools}
           </li>
         </ul>
       </div>

@@ -1,14 +1,17 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import { filteredProjects } from "../services/data";
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
-
 import { useSelector } from "react-redux";
 import {
     selectData,
     selectError,
     selectIsLoading,
-  } from "../services/allProjectsSlice";
+  } from "../store/reducers/allProjectsSlice";
+
+
+import {translate} from "../i18n";
+import { RootState } from "../store/store";
 
 
   const StyledAboutMe = styled.section`
@@ -40,6 +43,11 @@ function Project()  {
     const error = useSelector(selectError);
     const data = useSelector(selectData);
 
+    const {language} = useSelector((state: RootState) => state.lang);  
+    let content = translate('page', language) as any
+  
+  
+
     useEffect(
         function () {
             const tempData: any[] = [];
@@ -60,20 +68,13 @@ function Project()  {
       );
 
 
-      const [showFullDescription, setShowFullDescription] = useState(false);
-
-      const toggleDescription = () => {
-        setShowFullDescription(!showFullDescription);
-      };
-
-
     return (
     <>
         <StyledAboutMe className="section">
             <div className='container'>
                 <div className="d-flex container">
                     <Title>
-                    <h2>Projet</h2>
+                    <h2>{content.project.title}</h2>
                     <div className="underline"></div>            
                     </Title>
                 </div>
@@ -96,16 +97,13 @@ function Project()  {
                     <div className="d-flex gap-2 justify-content-center">
                         {mainProjects.map(function ({
                             id,
-                            image,
                             name,
                             description,
                             html_url,
-                            homepage,
                         }) {
 
-
                             return (
-                                <div key={id} className="card">
+                                <div key={id} className="card mx-auto">
                                     <div>
                                     {/* <img src={image} alt={name} /> */}
                                         <div>
@@ -118,19 +116,17 @@ function Project()  {
 
                                              ) || (
                                                     <p className="card-body"
-                                                    >Pas de description</p>
+                                                    >{content.project.msg_1}</p>
                                              )
                                             }
                                             <div className='d-flex justify-content-center'>
                                                 <a href={html_url} target="_blank" rel="noreferrer" className='btn btn-primary'>
-                                                    Voir
+                                                {content.project.msg_2}
                                                 </a>
                                             </div>
-                                            {homepage && <button>Demo</button>}
                                         </div>
                                     </div>
-                                </div>
-                              
+                                </div>                           
                             );
                         })}
                     </div>
@@ -138,7 +134,7 @@ function Project()  {
                         <div className=" text-center mt-5">
                             <Link to="/All-Projects">
                                 <button className='btn btn-primary'>
-                                    Voir tous les projets
+                                    {content.project.msg_3}
                                 </button>
                             </Link>
                         </div>

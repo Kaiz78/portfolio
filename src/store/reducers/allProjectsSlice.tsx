@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 // Data
-import { githubUsername, projectCardImages } from "../services/data";
+import { githubUsername } from "../../services/data";
 
 const initialState = {
   error: "",
@@ -14,7 +14,7 @@ export const url = `https://api.github.com/users/${githubUsername}/repos?per_pag
 
 export const fetchGitHubReops = createAsyncThunk(
   "allProjects/fetchGitHubReops",
-  async (thunkApi, { rejectWithValue }) => {
+  async (_thunkApi, { rejectWithValue }) => {
     
     try {
         const response = await fetch(url).then(function (res) {
@@ -25,6 +25,7 @@ export const fetchGitHubReops = createAsyncThunk(
             return res;
         });
         const data = await response.json();
+        
         return data;
     } catch (err:any) {
         return rejectWithValue(
@@ -47,13 +48,6 @@ export const allProjectsSlice = createSlice({
             .addCase(fetchGitHubReops.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.data = action.payload;
-                projectCardImages.forEach(function (element) {
-                    state.data.forEach((el) => { // Remove the unused variable 'i'
-                        if ((element as { name: string }).name.toLowerCase() === (el as { name: string }).name.toLowerCase()) { // Add type annotations for 'name'
-                            (el as { image: string }).image = (element as { image: string }).image; // Add type annotations for 'image'
-                        }
-                    });
-                });
             })
             .addCase(fetchGitHubReops.rejected, (state, action) => {
                 state.isLoading = false;

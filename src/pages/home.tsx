@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from 'react-type-animation';
+import { selectData } from "../store/reducers/homeSlice";
 import { useSelector } from "react-redux";
-import { selectData } from "../services/homeSlice";
-
+import {translate} from "../i18n";
+import { RootState } from "../store/store";
 
 const StyledAboutMe = styled.section`
+
+  margin-bottom: 10rem;
   p {
     font-size: 1.25rem;
   }
@@ -14,7 +17,6 @@ const StyledAboutMe = styled.section`
     height: 18rem;
   }
 `;
-
 
 
 const Title = styled.div`
@@ -28,10 +30,11 @@ const Title = styled.div`
 
 
 
-function Home()  {    
-  
+function Home()  {  
+  const {language} = useSelector((state: RootState) => state.lang);  
+  let content = translate('page', language) as any
 
-    const { avatar_url, name } = useSelector(selectData);
+  const { avatar_url, name } = useSelector(selectData);
   
   return (
     <>
@@ -39,7 +42,7 @@ function Home()  {
         <div className="container">
           <div className="container d-flex">
             <Title>
-              <h2>Accueil</h2>
+              <h2>{content.home.title}</h2>
               <div className="underline"></div>            
             </Title>
           </div>
@@ -64,20 +67,12 @@ function Home()  {
                   {
                     fontSize: "38px",
                   }
-                }
-                >Salut, <span className="wave ">👋</span></p>
-                <p>Je m'appelle {name}</p>
-                <p>Je suis&nbsp;  
+                }>{content.home.msg_1}<span className="wave ">👋</span></p>
+                <p>{content.home.msg_2} {name}</p>
+                <p>{content.home.msg_3}&nbsp;  
                   <span>
                      <TypeAnimation
-                    sequence={[
-                        'développeur frontend', // Types 'One'
-                        2000, // Waits 1s
-                        'développeur backend', // Deletes 'One' and types 'Two'
-                        2000, // Waits 2s
-                        'chef de projet', // Types 'Three' without deleting 'Two'
-                        3000,
-                        ]}
+                         sequence={content.home.role?.flatMap((role:string, index:number) => [role, index < content.home.role.length - 1 ? 3000 : 0]) || []}
                         wrapper="span"
                         cursor={true}
                         repeat={Infinity}
@@ -87,10 +82,10 @@ function Home()  {
 
                 <div className="d-flex gap-3 justify-content-center">
                     <Link to="/about">
-                      <button className="btn btn-primary">A propos</button>
+                      <button className="btn btn-primary">{content.home.msg_4}</button>
                     </Link>
                     <Link to="/contact">
-                      <button className="btn btn-primary">Contact</button>
+                      <button className="btn btn-primary">{content.home.msg_5}</button>
                     </Link>
                 </div>
               </div>

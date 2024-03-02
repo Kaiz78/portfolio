@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 // Data
-import { githubUsername } from "../services/data";
+import { githubUsername } from "../../services/data";
 
 
 const initialState = {

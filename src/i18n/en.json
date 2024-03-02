@@ -1,0 +1,193 @@
+{
+  "page" : {
+    "home": {
+      "title": "Home",
+      "msg_1": "Hi,",
+      "msg_2": "I'm",
+      "name": "Amine Mokhtari",
+      "msg_3": "A",
+      "role": ["FullStack Developer", "Project Manager", "Software Architect", ""],
+
+      "msg_4": "About",
+      "msg_5": "Contact"
+    },
+    "about": {
+      "title": "About",
+      "msg_1": "I am passionate about software development, constantly seeking ways to combine technological innovation with organizational efficiency. Organized and methodical, I approach every challenge with a problem-solving mindset. My approach involves consistently elevating my skills to deliver innovative solutions. Outside of work, I invest my time in continuous learning of emerging IT trends.",
+      "msg_2":"Paris, France"
+    },
+    "education": {
+      "title": "Education",
+      "school": [
+          {
+              "icon": "./school/CESI.jpg",
+              "projectLink": "https://www.cesi.fr/",
+              "name": "CESI",
+              "degree": "MASTER - MAALSI",
+              "skill": [
+                  "Cloud Solutions Integration and Service Management: Successfully implemented an active sales system on the Breizhsport e-commerce site using AWS cloud services.",
+                  "Docker Usage and Containerization: Successfully implemented Docker containers for creating and deploying microservices.",
+                  "Containerization Tools Deployment and Cluster Management: Configured and implemented a Kubernetes cluster for the Breizhsport project, demonstrating initiation and familiarity with containerization and orchestration concepts.",
+                  "Microservices Design and Development: Successfully created microservices for the Breizhsport project, implementing a modular and scalable architecture.",
+                  "PHPUnit Unit Testing Implementation: Successfully integrated unit tests with PHPUnit in the development of Breizhsport project components, ensuring code robustness and reliability."
+              ],
+              "subject": "Program:",
+              "tools": "MAALSI (Manager in Architecture and Software Applications of Information Systems).",
+              "duration": "September 2023 - September 2024",
+              "location": "Nanterre, France"
+          },
+          {
+              "icon": "./school/CESI.jpg",
+              "projectLink": "https://www.cesi.fr/",
+              "name": "CESI",
+              "degree": "MASTER - MAALSI",
+              "skill": [
+                  "Complete Project Management in Full-Stack Environment: Successfully implemented the GoodFood project, overseeing the development of a mobile/web application.",
+                  "Roadmap Strategy and Task Prioritization: Designed and implemented a roadmap for the Project Manager Officer Time'Eats project. Effective use of KPIs to guide decisions, ensuring alignment of activities with strategic business objectives.",
+                  "Communication and Presentation Skills: Presentation experience in front of a board of directors, highlighting advanced communication and soft skills."
+              ],
+              "subject": "Program:",
+              "tools": "MAALSI (Manager in Architecture and Software Applications of Information Systems).",
+              "duration": "September 2022 - September 2023",
+              "location": "Nanterre, France"
+          },
+          {
+              "icon": "./school/CESI.jpg",
+              "projectLink": "https://www.cesi.fr/",
+              "name": "CESI",
+              "degree": "BACHELOR - RIL",
+              "skill": [
+                  "Development of a Social Network Application: Used JavaSpring and NextJS technologies to create an interactive platform, demonstrating versatility in choosing and mastering multiple frameworks.",
+                  "Learning and Mastery of Git: Acquired essential version control skills with Git during the ProjeRE project, marking the beginning of regular use of this technology for tracking changes in source code.",
+                  "Incomplete Project Management: Participated in the design and implementation of the ProjeRE social network, although the project was not fully completed.",
+                  "Participation in an Ambitious Project: Actively learned software development best practices as the ProjeRE project progressed despite encountered difficulties."
+              ],
+              "subject": "Program:",
+              "tools": "RIL (Software Engineering Manager).",
+              "duration": "September 2021 - September 2022",
+              "location": "Nanterre, France"
+          },
+          {
+              "icon": "./school/BTS.jpg",
+              "projectLink": "https://lyc-ferry-versailles.ac-versailles.fr/",
+              "name": "Lycée Jules Ferry",
+              "degree": "BTS - SNIR",
+              "skill": [
+                  "IHM Development: Successfully designed and developed the user interface (IHM) of the syringe pump application using C#.",
+                  "Database Design: Responsible for designing the underlying database, demonstrating an in-depth understanding of data management principles.",
+                  "Mail Alert Management: Successfully implemented an email alert system in the syringe pump application.",
+                  "Teamwork on a Technical Project: Actively participated in a concrete technical project for the development of medical equipment."
+              ],
+              "subject": "Program:",
+              "tools": "BTS SNIR (Digital Systems with Computer and Networks option).",
+              "duration": "September 2019 - June 2021",
+              "location": "Versailles, France"
+          }
+      ]
+  },
+  
+    "experience": {
+      "title": "Experience",
+      "company": [
+          {
+              "icon": "experience/bbc.jpg",
+              "projectLink": "https://www.bigben-connected.com/",
+              "name": "Bigben-connected",
+              "degree": "Full-Stack Developer",
+              "skill": [
+                  "Successful Migration: Successfully migrated a native PHP application to Laravel.",
+                  "PHP Intranet Development: Developed a PHP5.6 intranet application, showcasing extensive full-stack skills and an ability to create solutions tailored to the company's specific needs.",
+                  "Project Manager VMI ZOE: Successfully executed the VMI project (focused on replenishment management and stock control) as the project manager for the ZOE application. Gained expertise in project management, development, and acquired in-depth knowledge of VMI business logic.",
+                  "CI Implementation with Jenkins: Successfully implemented continuous integration (CI) with Jenkins, demonstrating expertise in creating an integration pipeline.",
+                  "Stripe Payment Integration: Successfully implemented a payment solution with Stripe, utilizing webhooks.",
+                  "Testing: Used PHPUnit for unit tests, ensuring software quality through automated tests."
+              ],
+              "subject": "Tools:",
+              "tools": "PHP5.6/7.33+, Laravel, HTML5, CSS3, JQUERY, Jenkins, Stripe, APIREST, Docker, Linux, AWS, Git, Postman, Cypress, PHPUnit",
+              "duration": "October 2021 - Present",
+              "location": "Paris, France"
+          },
+          {
+              "icon": "experience/Proxiserve.png",
+              "projectLink": "https://www.proxiserve.fr/",
+              "name": "Proxiserve",
+              "degree": "Mobile Developer Internship",
+              "skill": [
+                  "Successful Mobile Development: Successfully designed and created the company's first mobile application using Android Studio in Java.",
+                  "RSS Feed Integration: Successfully integrated the company's website RSS feed into the mobile application.",
+                  "Autonomy and Initiative: Took personal initiative in the development of the application."
+              ],
+              "subject": "Tools:",
+              "tools": "Java, Android Studio, RSS Feed",
+              "duration": "October 2020 - November 2020",
+              "location": "Paris, France"
+          }
+      ]
+  },
+  
+    "project": {
+      "title": "Projects",
+      "msg_1": "No description",
+      "msg_2":"See",
+      "msg_3":"See all Projects"
+    },
+    "allProject": {
+      "title": "All projects",
+      "msg_1": "Search for a project by name",
+      "msg_2":"No description",
+      "msg_3":"See"
+    },
+    "skills": {
+      "title": "Skills",
+      "skills": {
+          "languages": [
+            { "title": "Languages and databases", "name": "HTML5", "icon": "logos:html-5", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "CSS3", "icon": "logos:css-3", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "SCSS", "icon": "logos:sass", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "JavaScript", "icon": "logos:javascript", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "jQuery", "icon": "devicon-plain:jquery-wordmark", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "PHP 5.6/7.33+", "icon": "logos:php", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "Java", "icon": "logos:java", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "Script Batch", "icon": "arcticons:shell-terminal", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "Script Shell", "icon": "arcticons:shell-terminal", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "PostgreSQL", "icon": "logos:postgresql", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "MySQL", "icon": "logos:mysql", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Languages", "name": "MariaDB", "icon": "logos:mariadb", "fontSize": "calc(1.5em + 2vw)", "level": 3 }
+          ],
+          "frameworks": [
+            { "title": "Frameworks", "name": "Bootstrap", "icon": "logos:bootstrap", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Frameworks", "name": "Tailwind CSS", "icon": "vscode-icons:file-type-tailwind", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Frameworks", "name": "React", "icon": "logos:react", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Frameworks", "name": "Spring Boot", "icon": "devicon:spring", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Frameworks", "name": "Laravel", "icon": "logos:laravel", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Frameworks", "name": "Symfony", "icon": "logos:symfony", "fontSize": "calc(1.5em + 2vw)", "level": 3 }
+          ],
+          "tools": [
+            { "title": "Tools", "name": "Excel", "icon": "vscode-icons:file-type-excel", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "NotePad++", "icon": "simple-icons:notepadplusplus", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Stripe", "icon": "bi:stripe", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Let's Encrypt", "icon": "uim:padlock", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "JWT", "icon": "logos:jwt-icon", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "VS Code", "icon": "devicon:vscode", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Git", "icon": "devicon:git", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "ApiREST", "icon": "dashicons:rest-api", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Linux", "icon": "logos:linux-tux", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Apache", "icon": "logos:apache", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "AWS", "icon": "skill-icons:aws-light", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Docker", "icon": "devicon:docker-wordmark", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Kubernetes", "icon": "logos:kubernetes", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Grafana", "icon": "devicon:grafana", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Jenkins CI", "icon": "logos:jenkins", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "PhpUnit", "icon": "vscode-icons:file-type-phpunit", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Postman", "icon": "devicon:postman", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+            { "title": "Outils", "name": "Cypress", "icon": "vscode-icons:file-type-cypress", "fontSize": "calc(1.5em + 2vw)", "level": 3 }
+          ]
+        
+      }          
+    },
+    "cv": {
+      "title": "CV",
+      "msg_1": "Click to see my CV."  
+    }
+  }
+}

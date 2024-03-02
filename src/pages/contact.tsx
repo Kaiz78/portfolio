@@ -33,7 +33,7 @@ function Contact()  {
               <div className="underline"></div>            
             </Title>
           </div>
-          <div className="card">
+          <div className="card  mx-auto w-75 ">
             <div className="container text-center">
                 <div className="social-icons d-flex justify-content-center gap-4">
                     <div className="d-flex-reverse">

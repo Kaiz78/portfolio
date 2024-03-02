@@ -1,31 +1,30 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectData as homeData } from "../services/homeSlice";
-import { selectData, selectError, selectIsLoading } from "../services/allProjectsSlice";
+import { selectData as homeData } from "../store/reducers/homeSlice";
+import { selectData, selectError, selectIsLoading } from "../store/reducers/allProjectsSlice";
 import styled from "styled-components";
-// Icons
-import { Icon } from "@iconify/react";
 import StyledCard from "../components/styledCard";
 // Components
 import {
-  Col,
-  Container,
   FormControl,
   InputGroup,
   Pagination,
-  Row,
 } from "react-bootstrap";
+
+
+import {translate} from "../i18n";
+import { RootState } from "../store/store";
 
 const StyledAboutMe = styled.section`
 
-margin-bottom: 10rem;
-p {
-  font-size: 1.25rem;
-}
-.img {
-  width: 18rem;
-  height: 18rem;
-}
+  margin-bottom: 10rem;
+  p {
+    font-size: 1.25rem;
+  }
+  .img {
+    width: 18rem;
+    height: 18rem;
+  }
 `;
 
 const Title = styled.div`
@@ -48,9 +47,14 @@ export default function AllProjects() {
   const data = useSelector(selectData);
   const { name } = useSelector(homeData);
 
+  const {language} = useSelector((state: RootState) => state.lang);
+  let content = translate('page', language) as any
+
+
+
   React.useEffect(
     function () {
-      document.title = `${name} | All Projects`;
+      document.title = `${name} | ${content.allProject.title}`;
     },
     [name]
   );
@@ -143,14 +147,14 @@ export default function AllProjects() {
         <div className="container">
           <div className="d-flex">
             <Title>
-              <h2>Tous les projets</h2>
+              <h2>{content.allProject.title}</h2>
               <div className="underline"></div>            
             </Title>
           </div>
           <InputGroup className=" row mx-auto mb-3 p-3">
 
             <FormControl
-              placeholder="Project name"
+              placeholder={content.allProject.msg_1}
               aria-label="Search projects"
               aria-describedby="search"
               onChange={(e) => setSearchInput(e.currentTarget.value)}
@@ -164,23 +168,26 @@ export default function AllProjects() {
                   name,
                   description,
                   html_url,
-                  homepage,
                 }) {
                   return (
-                    <div  className="card p-3 col-md-4" key={id}>
+                    <div  className="card mx-auto p-3 " key={id}
+                    style={
+                      {
+                        width: '95%',
+                      }
+                    }
+                    >
                       <StyledCard 
                         image={image}
                         name={name}
                         description={description}
                         url={html_url}
-                        demo={homepage}
                       /> 
                     </div>
                   );
                 })
               : filteredResults.map(function ({
                   id,
-                  image,
                   name,
                   description,
                   html_url,
@@ -188,32 +195,31 @@ export default function AllProjects() {
                 }) {
                   return (
                     <>
-                    <div key={id} className="col-lg-4 col-md-6">
-                                    <div className="card">
-                                    {/* <img src={image} alt={name} /> */}
-                                        <div>
-                                            <h3 className='text-center'>{name}</h3>
-                                            <div className='underline-2'></div>
-                                            {
-                                             description && (
-                                                 <p className="card-body"
-                                                 >{description}</p>
+                      <div key={id} className="col-lg-4 col-md-6">
+                                      <div className="card">
+                                      {/* <img src={image} alt={name} /> */}
+                                          <div>
+                                              <h3 className='text-center'>{name}</h3>
+                                              <div className='underline-2'></div>
+                                              {
+                                              description && (
+                                                  <p className="card-body"
+                                                  >{description}</p>
 
-                                             ) || (
-                                                    <p className="card-body"
-                                                    >Pas de description</p>
-                                             )
-                                            }
-                                            <div className='d-flex justify-content-center'>
-                                                <a href={html_url} target="_blank" rel="noreferrer" className='btn btn-primary'>
-                                                    Voir
-                                                </a>
-                                            </div>
-                                            {homepage && <button>Demo</button>}
-                                        </div>
-                                    </div>
-                                </div>
-                    
+                                              ) || (
+                                                      <p className="card-body"
+                                                      >{content.allProject.msg_2}</p>
+                                              )
+                                              }
+                                              <div className='d-flex justify-content-center'>
+                                                  <a href={html_url} target="_blank" rel="noreferrer" className='btn btn-primary'>
+                                                  {content.allProject.msg_3}
+                                                  </a>
+                                              </div>
+                                              {homepage && <button>Demo</button>}
+                                          </div>
+                                      </div>
+                      </div>
                     </>
                   );
                 })}

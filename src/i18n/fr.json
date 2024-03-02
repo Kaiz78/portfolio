@@ -1,0 +1,192 @@
+{
+    "page" : {
+      "home": {
+        "title": "Accueil",
+        "msg_1": "Salut,",
+        "msg_2": "Je m'appelle",
+        "name": "Amine Mokhtari",
+
+        "msg_3": "Je suis",
+        "role": ["Développeur FullStack", "Chef de Projet", "Architecte Logiciel",""],
+        "msg_4": "A propos",
+        "msg_5": "Contact"
+      },
+      "about": {
+        "title": "A propos",
+        "msg_1": "Je suis passionné par le développement informatique, constamment à la recherche de moyens pour allier innovation technologique et efficacité organisationnelle. Organisé et méthodique,j'aborde chaque défi avec un esprit de résolution de problèmes. Mon approche consiste à constamment élever mes compétences pour offrir des solutions innovantes. En dehors du travail, j'investis mon temps dans l'apprentissage continu des nouvelles tendances informatiques.",
+        "msg_2":"Paris, France"
+      },
+      "education": {
+        "title": "Education",
+        "school": [
+          {
+            "icon": "./school/CESI.jpg",
+            "projectLink": "https://www.cesi.fr/",
+            "name": "CESI",
+            "degree": "MASTER - MAALSI",
+            "skill": [
+              "Intégration de Solutions Cloud et Gestion de Services : Implémentation réussie d'un système de vente active sur le site d'e-commerce Breizhsport en utilisant des services cloud AWS.",
+              "Utilisation de Docker et Conteneurisation : Mise en œuvre réussie de conteneurs Docker pour la création et le déploiement de micro-services.",
+              "Déploiement d'Outils de Conteneurisation et Gestion de Clusters : Configuration et mise en œuvre d'un cluster Kubernetes pour le projet Breizhsport, démontrant une initiation et une familiarisation avec les concepts de conteneurisation et d'orchestration. ",
+              "Conception et Développement de Micro-Services : Création réussie de micro-services pour le projet Breizhsport, mettant en œuvre une architecture modulaire et évolutive.",
+              "Implémentation de Tests Unitaires avec PHPUnit : Intégration réussie de tests unitaires avec PHPUnit dans le cadre du développement des composants du projet Breizhsport, garantissant la robustesse et la fiabilité du code. "
+            ],
+            "subject": "Formation:",
+            "tools": "MAALSI (Manager en Architecture et Applications Logicielles des Systèmes d’Information).",
+            "duration": "Septembre 2023 - Septembre 2024",
+            "location": "Nanterre, France"
+          },
+          {
+            "icon": "./school/CESI.jpg",
+            "projectLink": "https://www.cesi.fr/",
+            "name": "CESI",
+            "degree": "MASTER - MAALSI",
+            "skill": [
+              "Gestion de Projets Complets en Environnement Full-Stack : Mise en œuvre réussie du projet GoodFood, supervisant le développement d'une application mobile/web.",
+              "Stratégie de Roadmap et Priorisation des Tâches : Conception et implémentation d'une roadmap pour le projet Project Manager Officer Time'Eats. Utilisation efficace des KPI pour orienter les décisions, garantissant l'alignement des activités avec les objectifs stratégiques de l'entreprise.",
+              "Compétences en Communication et Présentation : Expérience de présentation devant un jury de comité de direction, mettant en valeur des compétences avancées en communication et en soft skills."
+            ],
+            "subject": "Formation:",
+            "tools": "MAALSI (Manager en Architecture et Applications Logicielles des Systèmes d’Information).",
+            "duration": "September 2022 - September 2023",
+            "location": "Nanterre, France"
+          },
+          {
+            "icon": "./school/CESI.jpg",
+            "projectLink": "https://www.cesi.fr/",
+            "name": "CESI",
+            "degree": "BACHELOR - RIL",
+            "skill": [
+              "Développement d'une Application de Réseau Social : Utilisation des technologies JavaSpring et NextJS pour la création d'une plateforme interactive, illustrant une polyvalence dans le choix et la maîtrise de plusieurs frameworks.",
+              "Apprentissage et Maîtrise de Git : Acquisition des compétences essentielles de gestion de version avec Git pendant le projet ProjeRE, marquant le début d'une utilisation régulière de cette technologie pour le suivi des modifications du code source.",
+              "Gestion d'un Projet Inachevé : Participation à la conception et à la mise en œuvre du réseau social ProjeRE, bien que le projet n'ait pas été entièrement finalisé.",
+              "Participation à un Projet Ambitieux : Apprentissage actif des bonnes pratiques de développement logiciel au fur et à mesure de la progression du projet ProjeRE malgré les difficultés rencontrées."
+            ],
+            "subject": "Formation:",
+            "tools": "RIL (Responsable en Ingénierie des logiciels).",
+            "duration": "Septembre 2021 - Septembre 2022",
+            "location": "Nanterre, France"
+          },
+          {
+            "icon": "./school/BTS.jpg",
+            "projectLink": "https://lyc-ferry-versailles.ac-versailles.fr/",
+            "name": "Lycée Jules Ferry",
+            "degree": "BTS - SNIR",
+            "skill": [
+              "Développement de l'IHM : Conception et développement réussis de l'interface utilisateur (IHM) de l'application de pousse seringue en utilisant C#",
+              "Conception de la Base de Données : Responsabilité de la conception de la base de données sous-jacente, montrant une compréhension approfondie des principes de gestion des données",
+              "Gestion des Alertes par Mail : Implémentation réussie d'un système d'alerte par e-mail dans l'application de pousse seringue",
+              "Travail d'Équipe sur un Projet Technique : Participation active à un projet technique concret de développement de matériel médical."
+            ],
+            "subject": "Formation:",
+            "tools": "BTS SNIR (Systèmes Numériques option Informatique et Réseaux).",
+            "duration": "Septembre 2019 - Juin 2021",
+            "location": "Versailles, France"
+          }
+        ]
+      },
+      "experience": {
+        "title": "Expériences",
+        "company": [
+          {
+            "icon": "experience/bbc.jpg",
+            "projectLink": "https://www.bigben-connected.com/",
+            "name": "Bigben-connected",
+            "degree": "Développeur Full-Stack",
+            "skill": [
+              "Migration Réussie: Réussite de la migration d'une application PHP native vers Laravel.",
+              "Développement Intranet PHP : Développement d'une application  en PHP5.6, mettant en évidence des compétences étendues en fullstack et une capacité à créer des solutions adaptées aux besoins spécifiques de l'entreprise.",
+              "Chef de Projet VMI ZOE : Réalisation réussie du projet en tant que chef de projet VMI (axée sur la gestion du réassort et la gestion de stock) pour l'application ZOE, une montée en compétence en gestion de projet, développement, et acquisition de connaissances approfondies dans la logique métier des VMI.",
+              "Mise en Place CI avec Jenkins : Implémentation réussie d'une intégration continue (CI) avec Jenkins, montrant une expertise dans la création d'un pipeline d'intégration.",
+              "Intégration de Paiement avec Stripe : Mise en place réussie d'une solution de paiement avec Stripe, utilisant des webhooks.",
+              "Tests : Utilisation de PHPUnit pour les tests unitaires, garantissant une qualité logicielle à travers des tests automatisés."
+            ],
+            "subject": "Outils :",
+            "tools": "PHP5.6/7.33+, Laravel, HTML5, CSS3, JQUERY, Jenkins, Stripe, APIREST, Docker, Linux , AWS, Git, Postman, Cypress, PHPUnit",
+            "duration": "Octobre 2021 - Present",
+            "location": "Paris, France"
+          },
+          {
+            "icon": "experience/Proxiserve.png",
+            "projectLink": "https://www.proxiserve.fr/",
+            "name": "Proxiserve",
+            "degree": "Stage Développeur Mobile",
+            "skill": [
+              "Développement Mobile Réussi: Conception et création réussies de la première application mobile de l'entreprise en utilisant AndroidStudio en Java.",
+              "Intégration de Flux RSS : Intégration réussie du flux RSS du site web de l'entreprise dans l'application mobile.",
+              "Autonomie et Initiative : Initiative personnelle dans le développement de l'application."
+            ],
+            "subject": "Outils :",
+            "tools": "Java, Android Studio, Flux RSS",
+            "duration": "Octobre 2020 - Nov 2020",
+            "location": "Paris, France"
+          }
+
+        ]
+      },
+
+      "project": {
+        "title": "Projets",
+        "msg_1": "Pas de description",
+        "msg_2":"Voir",
+        "msg_3":"Voir tous les Projets"
+      },
+      "allProject": {
+        "title": "Tous les projets",
+        "msg_1": "Recherchez un projet par son nom",
+        "msg_2":"Pas de description",
+        "msg_3":"Voir"
+      },
+      "skills": {
+        "title": "Compétences",
+        "skills": {
+            "languages": [
+              { "title": "Langages et base de donnée", "name": "HTML5", "icon": "logos:html-5", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "CSS3", "icon": "logos:css-3", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "SCSS", "icon": "logos:sass", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "JavaScript", "icon": "logos:javascript", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "jQuery", "icon": "devicon-plain:jquery-wordmark", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "PHP 5.6/7.33+", "icon": "logos:php", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "Java", "icon": "logos:java", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "Script Batch", "icon": "arcticons:shell-terminal", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "Script Shell", "icon": "arcticons:shell-terminal", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "PostgreSQL", "icon": "logos:postgresql", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "MySQL", "icon": "logos:mysql", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Languages", "name": "MariaDB", "icon": "logos:mariadb", "fontSize": "calc(1.5em + 2vw)", "level": 3 }
+            ],
+            "frameworks": [
+              { "title": "Frameworks", "name": "Bootstrap", "icon": "logos:bootstrap", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Frameworks", "name": "Tailwind CSS", "icon": "vscode-icons:file-type-tailwind", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Frameworks", "name": "React", "icon": "logos:react", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Frameworks", "name": "Spring Boot", "icon": "devicon:spring", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Frameworks", "name": "Laravel", "icon": "logos:laravel", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Frameworks", "name": "Symfony", "icon": "logos:symfony", "fontSize": "calc(1.5em + 2vw)", "level": 3 }
+            ],
+            "tools": [
+              { "title": "Outils", "name": "Excel", "icon": "vscode-icons:file-type-excel", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "NotePad++", "icon": "simple-icons:notepadplusplus", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Stripe", "icon": "bi:stripe", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Let's Encrypt", "icon": "uim:padlock", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "JWT", "icon": "logos:jwt-icon", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "VS Code", "icon": "devicon:vscode", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Git", "icon": "devicon:git", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "ApiREST", "icon": "dashicons:rest-api", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Linux", "icon": "logos:linux-tux", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Apache", "icon": "logos:apache", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "AWS", "icon": "skill-icons:aws-light", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Docker", "icon": "devicon:docker-wordmark", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Kubernetes", "icon": "logos:kubernetes", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Grafana", "icon": "devicon:grafana", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Jenkins CI", "icon": "logos:jenkins", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "PhpUnit", "icon": "vscode-icons:file-type-phpunit", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Postman", "icon": "devicon:postman", "fontSize": "calc(1.5em + 2vw)", "level": 3 },
+              { "title": "Outils", "name": "Cypress", "icon": "vscode-icons:file-type-cypress", "fontSize": "calc(1.5em + 2vw)", "level": 3 }
+            ] 
+        }         
+      },
+      "cv": {
+        "title": "CV",
+        "msg_1": "Cliquez pour voir mon CV."  
+      }
+    }
+}

@@ -1,7 +1,12 @@
-import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
-
 import ProjectCard from "../components/projectCard";
+
+
+import { useSelector } from "react-redux";
+import {translate} from "../i18n";
+import { RootState } from "../store/store";
+
+
 
 
 const StyledAboutMe = styled.section`
@@ -28,60 +33,38 @@ const Title = styled.div`
 
 
 function Experience()  {    
+  const {language} = useSelector((state: RootState) => state.lang);
+  let content = translate('page', language) as any
+
     return (
     <>
 
          <StyledAboutMe className="section">
-        <Container>
-          <Container className="d-flex">
+        <div className="container">
+          <div className="container d-flex">
             <Title>
-              <h2>Expérience</h2>
+              <h2>{content.experience.title}</h2>
               <div className="underline"></div>            
             </Title>
-          </Container>
-            
-
-
-          <ProjectCard
-  logoSrc="/assets/img/exp-zhiffy-logo-1.webp"
-  projectLink="https://www.zhiffy.com/"
-  projectName="Zhiffy"
-  role="Software Engineer"
-  responsibilities={[
-    "Developed and managed the backend of an e-commerce platform using Flask, MongoDB, and AWS.",
-    "Worked on three web applications targeting customers, selling vendors, and admin users; built 50+ RESTful APIs with functionalities...",
-    "Improved the response time by 20% by refactoring the codebase and changing database design and queries.",
-    "Added a bulk upload feature which reduced the manual work of adding products into a database.",
-  ]}
-  tools="Python, Flask, MongoDB"
-  duration="July 2020 - Nov 2020"
-  location="Hyderabad, India"
-/>
-          <ProjectCard
-  logoSrc="/vite.svg"
-  projectLink="https://www.zhiffy.com/"
-  projectName="Zhiffy"
-  role="Software Engineer"
-  responsibilities={[
-    "Developed and managed the backend of an e-commerce platform using Flask, MongoDB, and AWS.",
-    "Worked on three web applications targeting customers, selling vendors, and admin users; built 50+ RESTful APIs with functionalities...",
-    "Improved the response time by 20% by refactoring the codebase and changing database design and queries.",
-    "Added a bulk upload feature which reduced the manual work of adding products into a database.",
-  ]}
-  tools="Python, Flask, MongoDB"
-  duration="July 2020 - Nov 2020"
-  location="Hyderabad, India"
-/>
-
-
-
-
-
-
-
-
-
-          </Container>
+          </div>
+          {
+            content.experience.company.map((school:any, index:number) => {
+              return (
+                <ProjectCard key={index}
+                    logoSrc={school.icon}
+                    projectLink={school.projectLink}
+                    projectName={school.name}
+                    role={school.degree}
+                    responsibilities={school.skill}
+                    subject={school.subject}
+                    tools={school.tools}
+                    duration={school.duration}
+                    location={school.location}
+                />
+              )
+            })
+          }
+        </div>
       </StyledAboutMe>
     </>
     )
