@@ -44,9 +44,10 @@ function App() {
     <>
     <BrowserRouter>
      <HelmetProvider>
-      <Navbar />
+    <Navbar />
+    
       <Routes>
-        <Route path="*" element={<Navigate to="/" />} />
+        {/* <Route path="*" element={<Navigate to="/" />} /> */}
         <Route path="/" element={<SideBar components={Home} name={name} />} />
         <Route path="/about" element={<SideBar components={About}  name={name}  />} />
         <Route path="/education" element={<SideBar components={Education}  name={name}  />} />
