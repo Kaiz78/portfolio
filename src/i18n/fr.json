@@ -20,7 +20,7 @@
         "title": "Education",
         "school": [
           {
-            "icon": "./school/CESI.jpg",
+            "icon": "/school/CESI.jpg",
             "projectLink": "https://www.cesi.fr/",
             "name": "CESI",
             "degree": "MASTER - MAALSI",
@@ -37,7 +37,7 @@
             "location": "Nanterre, France"
           },
           {
-            "icon": "./school/CESI.jpg",
+            "icon": "/school/CESI.jpg",
             "projectLink": "https://www.cesi.fr/",
             "name": "CESI",
             "degree": "MASTER - MAALSI",
@@ -52,7 +52,7 @@
             "location": "Nanterre, France"
           },
           {
-            "icon": "./school/CESI.jpg",
+            "icon": "/school/CESI.jpg",
             "projectLink": "https://www.cesi.fr/",
             "name": "CESI",
             "degree": "BACHELOR - RIL",
@@ -68,7 +68,7 @@
             "location": "Nanterre, France"
           },
           {
-            "icon": "./school/BTS.jpg",
+            "icon": "/school/BTS.jpg",
             "projectLink": "https://lyc-ferry-versailles.ac-versailles.fr/",
             "name": "Lycée Jules Ferry",
             "degree": "BTS - SNIR",
@@ -89,7 +89,7 @@
         "title": "Expériences",
         "company": [
           {
-            "icon": "experience/bbc.jpg",
+            "icon": "/experience/bbc.jpg",
             "projectLink": "https://www.bigben-connected.com/",
             "name": "Bigben-connected",
             "degree": "Développeur Full-Stack",
@@ -107,7 +107,7 @@
             "location": "Paris, France"
           },
           {
-            "icon": "experience/Proxiserve.png",
+            "icon": "/experience/Proxiserve.png",
             "projectLink": "https://www.proxiserve.fr/",
             "name": "Proxiserve",
             "degree": "Stage Développeur Mobile",

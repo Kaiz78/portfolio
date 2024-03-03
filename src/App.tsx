@@ -19,7 +19,6 @@ import {
 } from "./store/reducers/homeSlice";
 import { fetchGitHubReops } from './store/reducers/allProjectsSlice';
 import AllProjects from './pages/allprojects';
-import Navbar from './components/navbar';
 
 
 function App() {
