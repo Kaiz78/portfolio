@@ -52,12 +52,14 @@ function Home()  {
           <div className="p-2 align-items-center mt-5 ">
             <div className="card-home text-center">
               <div>
-                <img
+                <a className="opacity-hover" href="https://github.com/Kaiz78">
+                  <img
                     src={avatar_url}
                     alt="GitHub Avatar"
                     loading="lazy"
                     className="mx-auto rounded-circle float-left"
                     style={{ width: "100%", height: "100%" }} />
+                </a>
               </div>
               <div className="" style={
                   {

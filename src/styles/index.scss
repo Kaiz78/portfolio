@@ -17,6 +17,18 @@ body {
   font-size: calc(0.7em + 0.4vw);  
 }
 
+
+.opacity-hover{
+  img{
+    border: 4px solid #362828;
+  }
+}
+.opacity-hover:hover{
+  transition: 0.3s all;
+  opacity: 0.9;
+}
+
+
 .wave {
   animation-name: wave-animation;
   animation-duration: 2.5s;
