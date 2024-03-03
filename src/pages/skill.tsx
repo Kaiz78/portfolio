@@ -34,7 +34,7 @@ function Skill()  {
 
   const {language} = useSelector((state: RootState) => state.lang);
   let content = translate('page', language) as any
-  console.log(content.skills.skills)
+  
     return (
     <>
          <StyledAboutMe className="section">

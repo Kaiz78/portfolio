@@ -12,11 +12,18 @@ import { useState } from "react";
 import { FaAlignLeft } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
+import {translate} from "../i18n";
+import { RootState } from "../store/store";
+import { useSelector } from "react-redux";
+import Navbar from "../components/navbar";
+
 function sideBar(props:any){
 
-  console.log(props)
+  const {language} = useSelector((state: RootState) => state.lang);  
+  let content = translate('page', language) as any
+  
   const [isOpen, setIsOpen] = useState(false);
-
+  const ROUTE = import.meta.env.VITE_ROUTE;
   // si on clique sur le boutton sidebar
   const OpenSidebar = async (event:any) => {
     event.preventDefault();  
@@ -43,7 +50,7 @@ function sideBar(props:any){
                     
 
                     <li>
-                        <Link to="/">
+                        <Link to={`${ROUTE}/`}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -52,12 +59,12 @@ function sideBar(props:any){
                             }>
                                <FaHome  fontSize={34}/>
                             </div>
-                            <span className="link_name">Accueil</span>
+                            <span className="link_name">{content.home.title}</span>
                         </Link>
-                        <span className="tooltip">Acceuil</span>
+                        <span className="tooltip">{content.home.title}</span>
                     </li>
                     <li>
-                        <Link to="/about">
+                        <Link to={`${ROUTE}/about`}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -66,12 +73,12 @@ function sideBar(props:any){
                             }>
                               <RiUser3Fill   fontSize={34}/>
                             </div>
-                            <span className="link_name">A propos</span>
+                            <span className="link_name">{content.about.title}</span>
                         </Link>
-                        <span className="tooltip">A propos</span>
+                        <span className="tooltip">{content.about.title}</span>
                     </li>
                     <li>
-                        <Link to="/education">
+                        <Link to={`${ROUTE}/education`}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -80,12 +87,12 @@ function sideBar(props:any){
                             }>
                               <IoSchool fontSize={34} />
                             </div>
-                            <span className="link_name">Éducation</span>
+                            <span className="link_name">{content.education.title}</span>
                         </Link>
-                        <span className="tooltip">Éducation</span>
+                        <span className="tooltip">{content.education.title}</span>
                     </li>
                     <li>
-                        <Link to="/experience">
+                        <Link to={`${ROUTE}/experience`}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -94,12 +101,12 @@ function sideBar(props:any){
                             }>
                               <MdWork fontSize={34}/>
                             </div>
-                            <span className="link_name">Expérience</span>
+                            <span className="link_name">{content.experience.title}</span>
                         </Link>
-                        <span className="tooltip">Exprérience</span>
+                        <span className="tooltip">{content.experience.title}</span>
                     </li>
                     <li>
-                        <Link to="/project">
+                        <Link to={`${ROUTE}/project`}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -108,12 +115,12 @@ function sideBar(props:any){
                             }>
                               <PiProjectorScreenChartDuotone  fontSize={34}/>
                             </div>
-                            <span className="link_name">Projet</span>
+                            <span className="link_name">{content.project.title}</span>
                         </Link>
-                        <span className="tooltip">Projet</span>
+                        <span className="tooltip">{content.project.title}</span>
                     </li>
                     <li>
-                        <Link to="/skill">
+                        <Link to={`${ROUTE}/skill`}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -122,12 +129,12 @@ function sideBar(props:any){
                             }>
                               <LiaToolsSolid fontSize={34}/>
                             </div>
-                            <span className="link_name">Compétence</span>
+                            <span className="link_name">{content.skills.title}</span>
                         </Link>
-                        <span className="tooltip">Compétence</span>
+                        <span className="tooltip">{content.skills.title}</span>
                     </li>               
                     <li>
-                        <Link to="/cv">
+                        <Link to={`${ROUTE}/cv`}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -136,12 +143,12 @@ function sideBar(props:any){
                             }>
                               <FaFileAlt fontSize={34}/>
                             </div>
-                            <span className="link_name">CV</span>
+                            <span className="link_name">{content.cv.title}</span>
                         </Link>
-                        <span className="tooltip">CV</span>
+                        <span className="tooltip">{content.cv.title}</span>
                     </li>               
                     <li>
-                        <Link to="/contact">
+                        <Link to={`${ROUTE}/contact`}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -150,15 +157,16 @@ function sideBar(props:any){
                             }>
                               <BiMessageRoundedDots fontSize={34}/>
                             </div>
-                            <span className="link_name">Contact</span>
+                            <span className="link_name">{content.contact.title}</span>
                         </Link>
-                        <span className="tooltip">Contact</span>
+                        <span className="tooltip">{content.contact.title}</span>
                     </li>               
             </ul>
           </div>
         </div>
 
         <section className="home-section">
+            <Navbar />
             <props.components />
         </section>
     </div>

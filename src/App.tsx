@@ -27,6 +27,7 @@ function App() {
   // const isLoading = useSelector(selectIsLoading);
   // const error = useSelector(selectError);
   const dispatch = useDispatch();
+  const ROUTE = import.meta.env.VITE_ROUTE;
 
   
 
@@ -43,21 +44,19 @@ function App() {
   return (
     <>
     <BrowserRouter>
-     <HelmetProvider>
-    <Navbar />
-    
+     <HelmetProvider>    
       <Routes>
-        {/* <Route path="*" element={<Navigate to="/" />} /> */}
-        <Route path="/" element={<SideBar components={Home} name={name} />} />
-        <Route path="/about" element={<SideBar components={About}  name={name}  />} />
-        <Route path="/education" element={<SideBar components={Education}  name={name}  />} />
-        <Route path="/experience" element={<SideBar components={Experience}  name={name}  />} />
-        <Route path="/project" element={<SideBar components={Project}  name={name}  />} />
+        <Route path="*" element={<Navigate to={`${ROUTE}`} />} />
+        <Route path={`${ROUTE}`} element={<SideBar components={Home} name={name} />} />
+        <Route path={`${ROUTE}/about`} element={<SideBar components={About}  name={name}  />} />
+        <Route path={`${ROUTE}/education`} element={<SideBar components={Education}  name={name}  />} />
+        <Route path={`${ROUTE}/experience`} element={<SideBar components={Experience}  name={name}  />} />
+        <Route path={`${ROUTE}/project`} element={<SideBar components={Project}  name={name}  />} />
     
-        <Route path="/skill" element={<SideBar components={Skill}  name={name}  />} />
-        <Route path="/cv" element={<SideBar components={Cv}  name={name}  />} />
-        <Route path="/contact" element={<SideBar components={Contact}  name={name}  />} />
-        <Route path="/All-Projects" element={<SideBar components={AllProjects} />} />
+        <Route path={`${ROUTE}/skill`} element={<SideBar components={Skill}  name={name}  />} />
+        <Route path={`${ROUTE}/cv`} element={<SideBar components={Cv}  name={name}  />} />
+        <Route path={`${ROUTE}/contact`}  element={<SideBar components={Contact}  name={name}  />} />
+        <Route path={`${ROUTE}/allProject`} element={<SideBar components={AllProjects} />} />
       </Routes>
       </HelmetProvider>
     </BrowserRouter>

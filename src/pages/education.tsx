@@ -40,7 +40,7 @@ function Education()  {
   const {language} = useSelector((state: RootState) => state.lang);
   let content = translate('page', language) as any
 
-  console.log(content.education)
+
 
     return (
     <>

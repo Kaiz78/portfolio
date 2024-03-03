@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import {translate} from "../i18n";
 import { RootState } from "../store/store";
 
+
 const StyledAboutMe = styled.section`
 
   margin-bottom: 10rem;
@@ -35,6 +36,8 @@ function Home()  {
   let content = translate('page', language) as any
 
   const { avatar_url, name } = useSelector(selectData);
+  const ROUTE = import.meta.env.VITE_ROUTE;
+
   
   return (
     <>
@@ -72,6 +75,7 @@ function Home()  {
                 <p>{content.home.msg_3}&nbsp;  
                   <span>
                      <TypeAnimation
+                        key={content.home.role?.join('_')}
                          sequence={content.home.role?.flatMap((role:string, index:number) => [role, index < content.home.role.length - 1 ? 3000 : 0]) || []}
                         wrapper="span"
                         cursor={true}
@@ -81,10 +85,10 @@ function Home()  {
                 </p>
 
                 <div className="d-flex gap-3 justify-content-center">
-                    <Link to="/about">
+                    <Link to={`${ROUTE}/about`}>
                       <button className="btn btn-primary">{content.home.msg_4}</button>
                     </Link>
-                    <Link to="/contact">
+                    <Link to={`${ROUTE}/contact`}>
                       <button className="btn btn-primary">{content.home.msg_5}</button>
                     </Link>
                 </div>

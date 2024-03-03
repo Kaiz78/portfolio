@@ -24,13 +24,15 @@ const ProjectCard = ({
   duration,
   location
 }: ProjecCard) => {
+
+  const ROUTE = import.meta.env.VITE_ROUTE;
   return (
     <div className="card mb-5">
       <div className="card-content">
         <div className="d-flex" >
           <div className="my-1">
             <a href={projectLink} target="_blank">
-              <img alt={`${projectName} logo`} src={logoSrc} className="responsive-img center-block" width={80}  />
+              <img alt={`${projectName} logo`} src={`${ROUTE}${logoSrc}`} className="responsive-img center-block" width={80}  />
             </a>
           </div>
           <div className="mx-2">

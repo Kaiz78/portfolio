@@ -25,6 +25,11 @@ export const fetchGitHubReops = createAsyncThunk(
             return res;
         });
         const data = await response.json();
+
+        // add images default
+        data.forEach((element:any) => {
+            element.image = `https://via.placeholder.com/100/000000/FFFFFF/?text=${element.name}`;
+        });
         
         return data;
     } catch (err:any) {

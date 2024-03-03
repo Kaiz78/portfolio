@@ -6,7 +6,7 @@
       "msg_2": "I'm",
       "name": "Amine Mokhtari",
       "msg_3": "A",
-      "role": ["FullStack Developer", "Project Manager", "Software Architect", ""],
+      "role": ["FullStack Developer", "Software Engineer","Project Manager", ""],
 
       "msg_4": "About",
       "msg_5": "Contact"
@@ -20,7 +20,7 @@
       "title": "Education",
       "school": [
           {
-              "icon": "./school/CESI.jpg",
+              "icon": "/school/CESI.jpg",
               "projectLink": "https://www.cesi.fr/",
               "name": "CESI",
               "degree": "MASTER - MAALSI",
@@ -37,7 +37,7 @@
               "location": "Nanterre, France"
           },
           {
-              "icon": "./school/CESI.jpg",
+              "icon": "/school/CESI.jpg",
               "projectLink": "https://www.cesi.fr/",
               "name": "CESI",
               "degree": "MASTER - MAALSI",
@@ -52,7 +52,7 @@
               "location": "Nanterre, France"
           },
           {
-              "icon": "./school/CESI.jpg",
+              "icon": "/school/CESI.jpg",
               "projectLink": "https://www.cesi.fr/",
               "name": "CESI",
               "degree": "BACHELOR - RIL",
@@ -68,7 +68,7 @@
               "location": "Nanterre, France"
           },
           {
-              "icon": "./school/BTS.jpg",
+              "icon": "/school/BTS.jpg",
               "projectLink": "https://lyc-ferry-versailles.ac-versailles.fr/",
               "name": "Lycée Jules Ferry",
               "degree": "BTS - SNIR",
@@ -90,7 +90,7 @@
       "title": "Experience",
       "company": [
           {
-              "icon": "experience/bbc.jpg",
+              "icon": "/experience/bbc.jpg",
               "projectLink": "https://www.bigben-connected.com/",
               "name": "Bigben-connected",
               "degree": "Full-Stack Developer",
@@ -108,7 +108,7 @@
               "location": "Paris, France"
           },
           {
-              "icon": "experience/Proxiserve.png",
+              "icon": "/experience/Proxiserve.png",
               "projectLink": "https://www.proxiserve.fr/",
               "name": "Proxiserve",
               "degree": "Mobile Developer Internship",
@@ -188,6 +188,9 @@
     "cv": {
       "title": "CV",
       "msg_1": "Click to see my CV."  
+    },
+    "contact": {
+      "title": "Contact"
     }
   }
 }

@@ -46,12 +46,11 @@ function Project()  {
     const {language} = useSelector((state: RootState) => state.lang);  
     let content = translate('page', language) as any
   
-  
+    const ROUTE = import.meta.env.VITE_ROUTE;
 
     useEffect(
         function () {
             const tempData: any[] = [];
-            console.log(data)
             data.forEach((el, i) => (tempData[i] = Object.create(el)));
             if (data.length !== 0 && filteredProjects.length !== 0) {
                 const tempArray = tempData.filter((obj) =>
@@ -132,7 +131,7 @@ function Project()  {
                     </div>
                     {data.length > 3 && (
                         <div className=" text-center mt-5">
-                            <Link to="/All-Projects">
+                            <Link to={`${ROUTE}/allProject`}>
                                 <button className='btn btn-primary'>
                                     {content.project.msg_3}
                                 </button>

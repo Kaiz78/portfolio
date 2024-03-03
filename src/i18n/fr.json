@@ -7,7 +7,7 @@
         "name": "Amine Mokhtari",
 
         "msg_3": "Je suis",
-        "role": ["Développeur FullStack", "Chef de Projet", "Architecte Logiciel",""],
+        "role": ["Développeur FullStack", "Ingénieur Logiciel","Chef de Projet",""],
         "msg_4": "A propos",
         "msg_5": "Contact"
       },
@@ -187,6 +187,9 @@
       "cv": {
         "title": "CV",
         "msg_1": "Cliquez pour voir mon CV."  
+      },
+      "contact": {
+        "title": "Contact"
       }
     }
 }

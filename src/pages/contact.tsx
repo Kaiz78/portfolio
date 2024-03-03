@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
+import {translate} from "../i18n";
+import { RootState } from "../store/store";
+import { useSelector } from "react-redux";
+
 const StyledAboutMe = styled.section`
 
   margin-bottom: 10rem;
@@ -22,14 +26,18 @@ const Title = styled.div`
 `;
 
 
-function Contact()  {    
+function Contact()  {   
+  
+  const {language} = useSelector((state: RootState) => state.lang);  
+  let content = translate('page', language) as any
+
     return (
     <>
          <StyledAboutMe className="section">
         <div>
           <div className="d-flex">
             <Title>
-              <h2>Contact</h2>
+              <h2>{content.contact.title}</h2>
               <div className="underline"></div>            
             </Title>
           </div>

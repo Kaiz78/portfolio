@@ -51,7 +51,6 @@ export default function AllProjects() {
   let content = translate('page', language) as any
 
 
-
   React.useEffect(
     function () {
       document.title = `${name} | ${content.allProject.title}`;
@@ -143,7 +142,7 @@ export default function AllProjects() {
   } else {
     return (
       <>
-        <StyledAboutMe className="section">
+      <StyledAboutMe className="section">
         <div className="container">
           <div className="d-flex">
             <Title>
@@ -178,6 +177,7 @@ export default function AllProjects() {
                     }
                     >
                       <StyledCard 
+                        id={id}
                         image={image}
                         name={name}
                         description={description}
@@ -191,36 +191,32 @@ export default function AllProjects() {
                   name,
                   description,
                   html_url,
-                  homepage,
                 }) {
-                  return (
-                    <>
-                      <div key={id} className="col-lg-4 col-md-6">
-                                      <div className="card">
-                                      {/* <img src={image} alt={name} /> */}
-                                          <div>
-                                              <h3 className='text-center'>{name}</h3>
-                                              <div className='underline-2'></div>
-                                              {
-                                              description && (
-                                                  <p className="card-body"
-                                                  >{description}</p>
+                  return (                  
+                    <div key={id} className="col-lg-4 col-md-6">
+                      <div className="card">
+                      {/* <img src={image} alt={name} /> */}
+                        <div>
+                        <h3 className='text-center'>{name}</h3>
+                        <div className='underline-2'></div>
+                        {
+                        description && (
+                            <p className="card-body"
+                            >{description}</p>
 
-                                              ) || (
-                                                      <p className="card-body"
-                                                      >{content.allProject.msg_2}</p>
-                                              )
-                                              }
-                                              <div className='d-flex justify-content-center'>
-                                                  <a href={html_url} target="_blank" rel="noreferrer" className='btn btn-primary'>
-                                                  {content.allProject.msg_3}
-                                                  </a>
-                                              </div>
-                                              {homepage && <button>Demo</button>}
-                                          </div>
-                                      </div>
+                        ) || (
+                                <p className="card-body"
+                                >{content.allProject.msg_2}</p>
+                        )
+                        }
+                        <div className='d-flex justify-content-center'>
+                            <a href={html_url} target="_blank" rel="noreferrer" className='btn btn-primary'>
+                            {content.allProject.msg_3}
+                            </a>
+                        </div>
+                        </div>
                       </div>
-                    </>
+                    </div>
                   );
                 })}
           </div>
@@ -256,9 +252,7 @@ export default function AllProjects() {
             )}
           </div>
         </div>
-
-
-        </StyledAboutMe>
+      </StyledAboutMe>
       </>
     );
   }
