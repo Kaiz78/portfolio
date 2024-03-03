@@ -45,7 +45,7 @@ function Education()  {
     return (
     <>
          <StyledAboutMe className="section">
-        <div className="container">
+        <div className="mx-auto">
           <div className="container d-flex">
             <Title>
               <h2>{content.education.title}</h2>

@@ -40,7 +40,7 @@ function Experience()  {
     <>
 
          <StyledAboutMe className="section">
-        <div className="container">
+        <div className="">
           <div className="container d-flex">
             <Title>
               <h2>{content.experience.title}</h2>

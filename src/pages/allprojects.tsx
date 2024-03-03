@@ -193,7 +193,7 @@ export default function AllProjects() {
                   html_url,
                 }) {
                   return (                  
-                    <div key={id} className="col-lg-4 col-md-6">
+                    <div key={id} className="col-lg-6 col-xl-4">
                       <div className="card">
                       {/* <img src={image} alt={name} /> */}
                         <div>
@@ -220,7 +220,7 @@ export default function AllProjects() {
                   );
                 })}
           </div>
-          <div className=" container d-flex justify-content-center mt-4">
+          <div className="d-flex justify-content-center mx-auto ">
             {pageItems.length <= 2 ? (
               <Pagination size="lg" className="mb-4">
                 {pageItems}

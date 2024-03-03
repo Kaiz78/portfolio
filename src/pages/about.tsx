@@ -42,7 +42,7 @@ function About()  {
               <div className="underline"></div>            
             </Title>
           </div>
-          <div className="d-flex flex-column text-center p-5">
+          <div className="d-flex flex-column text-center p-2">
               <div>
                 <p>{content.about.msg_1}</p>
               </div>

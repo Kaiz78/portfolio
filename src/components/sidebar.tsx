@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaAlignLeft } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross1 } from "react-icons/rx";
 
 import {translate} from "../i18n";
 import { RootState } from "../store/store";
@@ -44,7 +45,16 @@ function sideBar(props:any){
           <div className="auto-scroll">
             <div className="logo_details d-flex justify-content-center">
                 <div className="logo_name">{props.name}</div>
-                {isOpen ?  <FaAlignLeft   id="btn" onClick={OpenSidebar} /> : <GiHamburgerMenu  id="btn" onClick={OpenSidebar} />}
+                {isOpen ?  <FaAlignLeft   id="btn" onClick={OpenSidebar} /> :   <>
+                    <div className="d-none-768">
+                        <GiHamburgerMenu id="btn" onClick={OpenSidebar} />
+                    </div>
+                    <div className="d-none-768-plus">
+                        <RxCross1 id="btn" className="" onClick={OpenSidebar} />
+
+                    </div>
+                    </>
+                }
             </div> 
             <ul className="nav-list auto-scroll">
                     

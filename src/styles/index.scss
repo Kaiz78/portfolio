@@ -18,6 +18,19 @@ body {
 }
 
 
+
+
+.d-none-768-plus {
+  display: none;
+}
+
+.d-none-768 {
+  display: none;
+}
+
+
+
+
 .opacity-hover{
   img{
     border: 4px solid #362828;
@@ -28,6 +41,20 @@ body {
   opacity: 0.9;
 }
 
+
+
+
+
+.dropdown-item{
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  color: #fff;
+
+
+}
 
 .wave {
   animation-name: wave-animation;
@@ -63,6 +90,8 @@ body {
     transform: rotate(0deg);
   }
 }
+
+
 
 
 
@@ -142,10 +171,7 @@ body {
 
 .d-flex{
   display: flex;
- 
-
   padding: 1rem;
-
 }
 
 // media 375
@@ -156,7 +182,7 @@ body {
     justify-content: center;
   }
   
-  .d-flex{
+  .d-flex-custom{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,7 +191,7 @@ body {
 }
 
 .btn{
-  font-size: calc(0.7em + 0.4vw); 
+  font-size: calc(1em + 0.4vw); 
   background :  #342323 0%
 }  
 
@@ -190,11 +216,14 @@ a.hoverline {
   transition: 0.25s all;
   -moz-transition: 0.25s all;
   -webkit-transition: 0.25s all;
+  -o-transition: 0.25s all;
+
+  text-decoration: none;
 }
 
 
 a.hoverline:hover {
-  border-bottom: 3px solid #004d40 !important;
+  border-bottom: 3px solid #8dc8be !important;
 }
 
 .col .tooltip {
@@ -304,14 +333,17 @@ a.hoverline:hover {
     }
 }
 
+.country-size{
+  font-size: calc(0.8em + 0.5vw);  
+}
+
 
 // Card
 .card{
   border: 0.1rem solid #ebeaea;
   border-radius: 5px;
   padding: 1rem;
-  width: 100%;
-  min-width: 200px;
+  min-width: 300px;
 
   .role {
     font-size: calc(0.7em + 0.4vw);
@@ -463,7 +495,6 @@ a.hoverline:hover {
     text-align: center;
     color: #fff;
 }
-
 
 .sidebar svg{
     color: #ffffff;
@@ -618,10 +649,79 @@ color: var(--color-default);
     z-index: w;
 }
 
-
+.d-none-768{
+    display: block;
+}
 .sidebar.open ~ .home-section{
     left: 250px;
     width: calc(100% - 250px);
+}
+.btn-navbar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+
+.sidebar button {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+    position: sticky;
+  }
+
+  .sidebar.open {
+    width: 100%;
+    display: block;
+    animation: slideInMobile 0.5s ease; 
+  }
+
+  @keyframes slideInMobile {
+    from {
+      width: 0;
+    }
+    to {
+      width: 98%;
+    }
+  }
+
+  .home-section {
+    left: 0px;
+    width: 100%;
+  }
+  .btn-sidebar-navbar {
+    display: block;
+  }
+
+  .sidebar.open ~ .home-section{
+    left: 100%;
+    width: calc(100% - 100%);
+  }
+
+  .d-none-768{
+    display: none;
+  }
+  .d-none-768-plus{
+    display: block;
+  }
+
 }
 
 

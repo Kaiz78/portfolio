@@ -34,17 +34,7 @@ const DropdownMenu = styled.div`
   width: 120px;
 `;
 
-const DropdownItem = styled.div`
-  padding: 0.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.3s;
 
-  &:hover {
-    background-color: #000;
-  }
-`;
 
 const LanguageSelector = () => {
   const dispatch = useDispatch();
@@ -80,14 +70,15 @@ const LanguageSelector = () => {
       </DropdownButton>
       {isOpen && (
         <DropdownMenu>
-          <DropdownItem onClick={() => handleLanguageChange("FR")}>
-          <Icon icon="twemoji:flag-france" />
-            FR
-          </DropdownItem>
-          <DropdownItem onClick={() => handleLanguageChange("EN")}>
-          <Icon icon="twemoji:flag-for-united-kingdom" />
-            EN
-          </DropdownItem>
+          <div onClick={() => handleLanguageChange("FR")} className="dropdown-item">
+          <Icon icon="twemoji:flag-france" /> &nbsp;
+            <span className="country-size">FR</span>
+          </div>
+          
+          <div onClick={() => handleLanguageChange("EN")} className="dropdown-item">
+          <Icon icon="twemoji:flag-for-united-kingdom" /> &nbsp;
+            <span className="country-size">EN</span>
+          </div>
         </DropdownMenu>
       )}
         </StyledDropdown>
