@@ -7,8 +7,8 @@ import { PiProjectorScreenChartDuotone } from "react-icons/pi";
 import { LiaToolsSolid } from "react-icons/lia";
 import { FaFileAlt } from "react-icons/fa";
 import { BiMessageRoundedDots } from "react-icons/bi";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import {  NavLink, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { FaAlignLeft } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
@@ -39,6 +39,40 @@ function sideBar(props:any){
       setIsOpen(false);
     }
   };
+
+
+
+    const navigate = useNavigate();
+    const [screenSize, setScreenSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  const handleResize = () => {
+    setScreenSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  };
+
+  useEffect(() => {
+    // Écoute le changement de taille d'écran
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+
+  }, []);
+
+  const handleNavLinkClick = (event:Object, route:string) => {
+    if (screenSize.width < 768) {
+      OpenSidebar(event);
+      navigate(route);  
+    }
+  };
+
+
   return (
     <div>
         <div className="sidebar">
@@ -60,21 +94,26 @@ function sideBar(props:any){
                     
 
                     <li>
-                        <Link to={`${ROUTE}/`}>
-                            <div className='' style={
+                        <NavLink to={`${ROUTE}/`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
+                            handleNavLinkClick(e,`${ROUTE}/`);
+                        }}>
+                        
+                            <div className="" style={
                                 {
                                     marginLeft: '10%',
                                     height: '40px',
                                 }
-                            }>
+                            } >
                                <FaHome  fontSize={34}/>
                             </div>
                             <span className="link_name">{content.home.title}</span>
-                        </Link>
+                        </NavLink>
                         <span className="tooltip">{content.home.title}</span>
                     </li>
                     <li>
-                        <Link to={`${ROUTE}/about`}>
+                        <NavLink to={`${ROUTE}/about`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
+                            handleNavLinkClick(e,`${ROUTE}/about`);
+                        }}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -84,11 +123,13 @@ function sideBar(props:any){
                               <RiUser3Fill   fontSize={34}/>
                             </div>
                             <span className="link_name">{content.about.title}</span>
-                        </Link>
+                        </NavLink>
                         <span className="tooltip">{content.about.title}</span>
                     </li>
                     <li>
-                        <Link to={`${ROUTE}/education`}>
+                        <NavLink to={`${ROUTE}/education`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
+                            handleNavLinkClick(e,`${ROUTE}/education`);
+                        }}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -98,11 +139,13 @@ function sideBar(props:any){
                               <IoSchool fontSize={34} />
                             </div>
                             <span className="link_name">{content.education.title}</span>
-                        </Link>
+                        </NavLink>
                         <span className="tooltip">{content.education.title}</span>
                     </li>
                     <li>
-                        <Link to={`${ROUTE}/experience`}>
+                        <NavLink to={`${ROUTE}/experience`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
+                            handleNavLinkClick(e,`${ROUTE}/experience`);
+                        }}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -112,11 +155,13 @@ function sideBar(props:any){
                               <MdWork fontSize={34}/>
                             </div>
                             <span className="link_name">{content.experience.title}</span>
-                        </Link>
+                        </NavLink>
                         <span className="tooltip">{content.experience.title}</span>
                     </li>
                     <li>
-                        <Link to={`${ROUTE}/project`}>
+                        <NavLink to={`${ROUTE}/project`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
+                            handleNavLinkClick(e,`${ROUTE}/project`);
+                        }}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -126,11 +171,13 @@ function sideBar(props:any){
                               <PiProjectorScreenChartDuotone  fontSize={34}/>
                             </div>
                             <span className="link_name">{content.project.title}</span>
-                        </Link>
+                        </NavLink>
                         <span className="tooltip">{content.project.title}</span>
                     </li>
                     <li>
-                        <Link to={`${ROUTE}/skill`}>
+                        <NavLink to={`${ROUTE}/skill`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
+                            handleNavLinkClick(e,`${ROUTE}/skill`);
+                        }}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -140,11 +187,13 @@ function sideBar(props:any){
                               <LiaToolsSolid fontSize={34}/>
                             </div>
                             <span className="link_name">{content.skills.title}</span>
-                        </Link>
+                        </NavLink>
                         <span className="tooltip">{content.skills.title}</span>
                     </li>               
                     <li>
-                        <Link to={`${ROUTE}/cv`}>
+                        <NavLink to={`${ROUTE}/cv`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
+                            handleNavLinkClick(e,`${ROUTE}/cv`);
+                        }}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -154,11 +203,13 @@ function sideBar(props:any){
                               <FaFileAlt fontSize={34}/>
                             </div>
                             <span className="link_name">{content.cv.title}</span>
-                        </Link>
+                        </NavLink>
                         <span className="tooltip">{content.cv.title}</span>
                     </li>               
                     <li>
-                        <Link to={`${ROUTE}/contact`}>
+                        <NavLink to={`${ROUTE}/contact`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
+                            handleNavLinkClick(e,`${ROUTE}/contact`);
+                        }}>
                             <div className='' style={
                                 {
                                     marginLeft: '10%',
@@ -168,7 +219,7 @@ function sideBar(props:any){
                               <BiMessageRoundedDots fontSize={34}/>
                             </div>
                             <span className="link_name">{content.contact.title}</span>
-                        </Link>
+                        </NavLink>
                         <span className="tooltip">{content.contact.title}</span>
                     </li>               
             </ul>
