@@ -9,4 +9,4 @@ export const filteredProjects = ["example-1", "example-2", "example-3"];
   Add your formspree endpoint below.
   https://formspree.io/
 */
-export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+export const formspreeUrl = "https://formspree.io/f/xeqykynd";

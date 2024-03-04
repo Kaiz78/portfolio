@@ -189,7 +189,14 @@
         "msg_1": "Cliquez pour voir mon CV."  
       },
       "contact": {
-        "title": "Contact"
+        "title": "Contact",
+        "mail": "Envoyez un Message",
+        "social": "Réseaux Sociaux",
+        "msg_1": "Entrez votre email",
+        "msg_2": "Écrivez votre message",
+        "msg_3": "Envoyer",
+        "msg_4": "Votre message a été envoyé avec succès. Merci!"
+
       }
     }
 }

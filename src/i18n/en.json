@@ -190,7 +190,13 @@
       "msg_1": "Click to see my CV."  
     },
     "contact": {
-      "title": "Contact"
+      "title": "Contact",
+      "mail": "Send a Message",
+      "social": "Social Network",
+      "msg_1": "Enter your email",
+      "msg_2": "Write your message",
+      "msg_3": "Send",
+      "msg_4": "Your message has been successfully sent. Thank you!"
     }
   }
 }
