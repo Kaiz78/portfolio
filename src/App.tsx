@@ -42,7 +42,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter  basename="/portfolio/">
      <HelmetProvider>    
       <Routes>
         <Route path="*" element={<Navigate to={`${ROUTE}`} />} />
