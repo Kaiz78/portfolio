@@ -24,7 +24,7 @@ const DropdownButton = styled.div`
 
 const DropdownMenu = styled.div`
   position: absolute;
-  top: 100%;
+  top: 110%;
   right: 10%;
   background-color: #000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -72,12 +72,12 @@ const LanguageSelector = () => {
         <DropdownMenu>
           <div onClick={() => handleLanguageChange("FR")} className="dropdown-item">
           <Icon icon="twemoji:flag-france" /> &nbsp;
-            <span className="country-size">FR</span>
+            <span className="">FR</span>
           </div>
           
           <div onClick={() => handleLanguageChange("EN")} className="dropdown-item">
           <Icon icon="twemoji:flag-for-united-kingdom" /> &nbsp;
-            <span className="country-size">EN</span>
+            <span className="">EN</span>
           </div>
         </DropdownMenu>
       )}
