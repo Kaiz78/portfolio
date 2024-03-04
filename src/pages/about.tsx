@@ -42,12 +42,11 @@ function About()  {
               <div className="underline"></div>            
             </Title>
           </div>
-          <div className="d-flex flex-column text-center p-2">
+          <div className="card d-flex flex-column text-center p-2">
               <div>
                 <p>{content.about.msg_1}</p>
               </div>
-              <p className="text-end text-muted font-italic">{content.about.msg_2}</p>
-
+              <p className="p-4 text-end text-muted font-italic">{content.about.msg_2}</p>
           </div>
         </div>
       </StyledAboutMe>

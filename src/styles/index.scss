@@ -92,7 +92,10 @@ body {
 }
 
 
+.width-350{
+  width: 450px;
 
+}
 
 
 .heading_h1 {
@@ -191,7 +194,7 @@ body {
 }
 
 .btn{
-  font-size: calc(1em + 0.4vw); 
+  font-size: 1em;
   background :  #342323 0%
 }  
 
@@ -349,7 +352,7 @@ a.hoverline:hover {
     font-size: calc(0.7em + 0.4vw);
     position: absolute;
     right: 18px;
-    top: 35px;
+    top: 10%;
 
   }
 

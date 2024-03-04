@@ -70,8 +70,8 @@ function Project()  {
     return (
     <>
         <StyledAboutMe className="section">
-            <div className='container'>
-                <div className="d-flex container">
+            <div className='container-fluid'>
+                <div className="d-flex container-fluid">
                     <Title>
                     <h2>{content.project.title}</h2>
                     <div className="underline"></div>            
@@ -93,7 +93,7 @@ function Project()  {
             )}
             {mainProjects.length !== 0 && (
                 <>
-                    <div className="row justify-content-center">
+                    <div className="row justify-content-center p-2">
                         {mainProjects.map(function ({
                             id,
                             name,
@@ -102,7 +102,7 @@ function Project()  {
                         }) {
 
                             return (
-                                <div key={id} className="card col-4">
+                                <div key={id} className="width-350 card col-4">
                                     <div>
                                     {/* <img src={image} alt={name} /> */}
                                         <div>
