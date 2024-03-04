@@ -34,7 +34,7 @@ export const fetchGitHubReops = createAsyncThunk(
         return data;
     } catch (err:any) {
         return rejectWithValue(
-            `Error: ${err.message}, check username in data.js (currently ${githubUsername})`
+            `Error: ${err.message}, check username in data.tsx (currently ${githubUsername})`
         );
     }
   }

@@ -94,7 +94,7 @@ function sideBar(props:any){
                     
 
                     <li>
-                        <NavLink to={`${ROUTE}/`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
+                        <NavLink end to={`${ROUTE}/`} className={(nav) => (nav.isActive ? "nav-active" : "li-nav")} onClick={(e)=>{
                             handleNavLinkClick(e,`${ROUTE}/`);
                         }}>
                         

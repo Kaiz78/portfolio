@@ -26,7 +26,7 @@ export const fetchGitHubInfo = createAsyncThunk(
             return data;
         } catch (err) {
             return rejectWithValue(
-                `Error: ${(err as Error).message}, check username in data.js (currently ${githubUsername})`
+                `Error: ${(err as Error).message}, check username in data.tsx (currently ${githubUsername})`
             );
         }
     }
