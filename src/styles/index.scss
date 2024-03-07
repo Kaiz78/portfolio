@@ -355,7 +355,7 @@ a.hoverline:hover {
     font-size: calc(0.7em + 0.4vw);
     position: absolute;
     right: 18px;
-    top: 10%;
+    top: 4%;
 
   }
 
@@ -693,11 +693,13 @@ ul{
 
 @media screen and (max-width: 768px) {
   .sidebar {
-    display: none;
-    position: sticky;
+    position: relative;
+    left: -100%;
   }
 
   .sidebar.open {
+    position: relative;
+    left: 0%;
     width: 100%;
     display: block;
     animation: slideInMobile 0.5s ease; 

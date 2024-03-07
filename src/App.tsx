@@ -21,6 +21,7 @@ import { fetchGitHubReops } from './store/reducers/allProjectsSlice';
 import AllProjects from './pages/allprojects';
 
 
+
 function App() {
   let name = "Portfolio";
   // const isLoading = useSelector(selectIsLoading);
@@ -59,6 +60,8 @@ function App() {
       </Routes>
       </HelmetProvider>
     </BrowserRouter>
+
+
     </>
   )
 }

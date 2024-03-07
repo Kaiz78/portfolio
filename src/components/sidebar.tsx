@@ -17,6 +17,7 @@ import {translate} from "../i18n";
 import { RootState } from "../store/store";
 import { useSelector } from "react-redux";
 import Navbar from "../components/navbar";
+import Chatbot from '../components/chatBot';
 
 function sideBar(props:any){
 
@@ -221,7 +222,7 @@ function sideBar(props:any){
                             <span className="link_name">{content.contact.title}</span>
                         </NavLink>
                         <span className="tooltip">{content.contact.title}</span>
-                    </li>               
+                    </li>                            
             </ul>
           </div>
         </div>
@@ -229,6 +230,9 @@ function sideBar(props:any){
         <section className="home-section">
             <Navbar />
             <props.components />
+            <div className="">
+                <Chatbot />
+            </div>
         </section>
     </div>
   )
