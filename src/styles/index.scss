@@ -1,6 +1,9 @@
 // Defini variables color
-$color-navbar-1: #34252597 ;
-$color-navbar-2: #70ced3b9 ;
+$color-primary-1: #362828 ;
+$color-primary-2: #B8FBFF ;
+$color-primary-3: #B8FBFF ;
+$color-primary-4: #362828 ;
+
 $color-text: #000000;
 $color-button: #192C38;
 
@@ -143,7 +146,7 @@ body {
   border-radius: 0.25rem;
   background:  #000;
   margin: 0 auto 1.5rem auto;
-  background: linear-gradient(to right, #342323 0%, rgba(37, 234, 245, 0.6))
+  background: linear-gradient(to right, $color-primary-1 0%, $color-primary-2 100%)
 }
 
 .underline-2 {
@@ -152,7 +155,7 @@ body {
   min-width: 3rem;
   border-radius: 0.15rem;
   margin: 0 auto 1.5rem auto;
-  background: linear-gradient(to right, #342323 0%, rgba(37, 234, 245, 0.6))
+  background: linear-gradient(to right, $color-primary-1 0%, $color-primary-2 100%)
 }
 
 
@@ -195,14 +198,18 @@ body {
 
 .btn{
   font-size: 1em;
-  background :  #342323 0%
+  background : #6dc6cb 0%;
+  color: #fff;
 }  
 
 .btn:hover{
-  background : #60a1a5
-
+  background : #484848;
 }
 
+.btn:focus{
+  background : $color-primary-2;
+  color: #000;
+}
 .font-italic{
   font-style: italic;
 
@@ -315,7 +322,7 @@ a.hoverline:hover {
     width: 100%;
     min-height: 30px;
     height: 60px;
-    background: linear-gradient(180deg, #362828, #362828);
+    background: linear-gradient(180deg, $color-primary-1, $color-primary-1);
     color: white;
     z-index: 1; 
     display: flex;
@@ -448,7 +455,7 @@ a.hoverline:hover {
    width: 78px;
    padding: 6px 10px;
    z-index: 99;
-   background: linear-gradient(180deg, #342323 0%, rgba(37, 234, 245, 0.6) 100%);
+   background: linear-gradient(180deg, $color-primary-1 0%, $color-primary-2 100%);
    transition: all .5s ease; 
 
 }
@@ -745,27 +752,27 @@ ul{
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #280e5f45;
+  background: rgba(139, 139, 139, 0.526);
 }
   
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(82, 71, 71, 0.526);
+  background-color: rgba(174, 162, 162, 0.526);
   // border: 2px solid rgba(255, 0, 0, 0.526);
   // border-left: none;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #4690ffa1;
+    background: $color-primary-1;
 }
 ::-webkit-scrollbar-track-piece:end {
   background: transparent;
-  margin-bottom: 10px; 
+  margin-bottom: 0px; 
 }
 
 ::-webkit-scrollbar-track-piece:start {
   background: transparent;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 
@@ -805,10 +812,16 @@ ul{
   color: #333;
 }
 
-/* Style pour le paragraphe (p) à l'intérieur de la carte */
-.card p {
-  color: #555;
+
+.card a {
+  color: #6dc6cb;
+  text-decoration: none;
+
 }
+.card a:hover {
+  color: #484848
+}
+
 
 /* Style pour les boutons à l'intérieur de la carte */
 .card button {
@@ -816,7 +829,7 @@ ul{
   justify-content: center;
   margin-top: 8px;
   padding: 8px 16px;
-  background-color: #007bff; /* Couleur bleue par défaut de Bootstrap */
+  // background-color: $color-primary-1; /* Couleur bleue par défaut de Bootstrap */
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -830,30 +843,27 @@ ul{
   background-color: #28a745; /* Couleur verte par défaut de Bootstrap */
 }
 
-/* Style au survol des boutons */
-.card button:hover {
-  background-color: #5098e4; /* Couleur bleu foncé par défaut de Bootstrap */
-  color: #e0e0e0
-}
 
 .card-body{
   height:100px;
   overflow: auto;
 }
 
-
-
-
-
-
-
-
-
-
 .text-decoration-none{
   text-decoration: none;
 }
   
+
+
+.page-item.active .page-link{
+  background-color: #6dc6cb;
+  border: 1px solid #6dc6cb;
+}
+
+.page-link{
+  color: #6dc6cb;
+}
+
 
 
   

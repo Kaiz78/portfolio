@@ -43,25 +43,22 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-     <HelmetProvider>    
-      <Routes>
-        <Route path="*" element={<Navigate to={`${ROUTE}`} />} />
-        <Route path={`${ROUTE}`} element={<SideBar components={Home} name={name} />} />
-        <Route path={`${ROUTE}/about`} element={<SideBar components={About}  name={name}  />} />
-        <Route path={`${ROUTE}/education`} element={<SideBar components={Education}  name={name}  />} />
-        <Route path={`${ROUTE}/experience`} element={<SideBar components={Experience}  name={name}  />} />
-        <Route path={`${ROUTE}/project`} element={<SideBar components={Project}  name={name}  />} />
-    
-        <Route path={`${ROUTE}/skill`} element={<SideBar components={Skill}  name={name}  />} />
-        <Route path={`${ROUTE}/cv`} element={<SideBar components={Cv}  name={name}  />} />
-        <Route path={`${ROUTE}/contact`}  element={<SideBar components={Contact}  name={name}  />} />
-        <Route path={`${ROUTE}/allProject`} element={<SideBar components={AllProjects} />} />
-      </Routes>
-      </HelmetProvider>
-    </BrowserRouter>
-
-
+      <BrowserRouter>
+        <HelmetProvider>    
+          <Routes>
+            <Route path="*" element={<Navigate to={`${ROUTE}`} />} />
+            <Route path={`${ROUTE}`} element={<SideBar components={Home} name={name} />} />
+            <Route path={`${ROUTE}/about`} element={<SideBar components={About}  name={name}  />} />
+            <Route path={`${ROUTE}/education`} element={<SideBar components={Education}  name={name}  />} />
+            <Route path={`${ROUTE}/experience`} element={<SideBar components={Experience}  name={name}  />} />
+            <Route path={`${ROUTE}/project`} element={<SideBar components={Project}  name={name}  />} />
+            <Route path={`${ROUTE}/skill`} element={<SideBar components={Skill}  name={name}  />} />
+            <Route path={`${ROUTE}/cv`} element={<SideBar components={Cv}  name={name}  />} />
+            <Route path={`${ROUTE}/contact`}  element={<SideBar components={Contact}  name={name}  />} />
+            <Route path={`${ROUTE}/allProject`} element={<SideBar components={AllProjects} />} />
+          </Routes>
+        </HelmetProvider>
+      </BrowserRouter>
     </>
   )
 }

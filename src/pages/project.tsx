@@ -119,8 +119,8 @@ function Project()  {
                                              )
                                             }
                                             <div className='d-flex justify-content-center'>
-                                                <a href={html_url} target="_blank" rel="noreferrer" className='btn btn-primary'>
-                                                {content.project.msg_2}
+                                                <a href={html_url} target="_blank" rel="noreferrer" className='btn'>
+                                                <span className='text-white'>{content.project.msg_2}</span>
                                                 </a>
                                             </div>
                                         </div>
@@ -132,8 +132,8 @@ function Project()  {
                     {data.length > 3 && (
                         <div className=" text-center mt-5">
                             <Link to={`${ROUTE}/allProject`}>
-                                <button className='btn btn-primary'>
-                                    {content.project.msg_3}
+                                <button className='btn'>
+                                <span className='text-white'>{content.project.msg_3}</span>
                                 </button>
                             </Link>
                         </div>

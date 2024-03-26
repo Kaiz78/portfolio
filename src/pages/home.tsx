@@ -88,10 +88,10 @@ function Home()  {
 
                 <div className="d-flex gap-3 justify-content-center">
                     <Link to={`${ROUTE}/about`}>
-                      <button className="btn btn-primary">{content.home.msg_4}</button>
+                      <button className="btn"><span className='text-white'>{content.home.msg_4}</span></button>
                     </Link>
                     <Link to={`${ROUTE}/contact`}>
-                      <button className="btn btn-primary">{content.home.msg_5}</button>
+                      <button className="btn "><span className='text-white'>{content.home.msg_5}</span></button>
                     </Link>
                 </div>
               </div>
