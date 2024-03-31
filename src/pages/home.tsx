@@ -58,7 +58,7 @@ function Home()  {
                     alt="GitHub Avatar"
                     loading="lazy"
                     className="mx-auto rounded-circle float-left"
-                    style={{ width: "100%", height: "100%" }} />
+                    style={{ width: "100%", height: "100%", maxWidth: "350px" }} />
                 </a>
               </div>
               <div className="" style={
