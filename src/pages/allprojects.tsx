@@ -210,8 +210,8 @@ export default function AllProjects() {
                         )
                         }
                         <div className='d-flex justify-content-center'>
-                            <a href={html_url} target="_blank" rel="noreferrer" className='btn btn-primary'>
-                            {content.allProject.msg_3}
+                            <a href={html_url} target="_blank" rel="noreferrer" className='btn'>
+                            <span className='text-white'>{content.allProject.msg_3}</span>
                             </a>
                         </div>
                         </div>

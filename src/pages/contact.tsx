@@ -103,43 +103,43 @@ function ContactForm() {
   }
   return (
     <div className="container">
-    <h4 className="text-center">{content.contact.mail}</h4>
-    <form onSubmit={handleSubmit} className="row justify-content-center">
-      <div className="mb-3 form-floating">
-        <input
-          id="email"
-          type="email" 
-          name="email"
-          placeholder="Email"
-          className="form-control rounded"
-        />
-          <label htmlFor="email" className="form-label mx-2">{content.contact.msg_1}</label>
-        <ValidationError 
-          prefix="Email" 
-          field="email"
-          errors={state.errors}
-        />
-      </div>
-      
-      <div className="mb-3 form-floating">
-        <textarea
-          id="message"
-          name="message"
-          className="form-control"
-          placeholder="Message"
-        />
-        <label htmlFor="message"  className="form-label mx-2">{content.contact.msg_2}</label>
-        <ValidationError 
-          prefix="Message" 
-          field="message"
-          errors={state.errors}
-        />
-      </div>
+      <h4 className="text-center">{content.contact.mail}</h4>
+      <form onSubmit={handleSubmit} className="row justify-content-center">
+        <div className="mb-3 form-floating">
+          <input
+            id="email"
+            type="email" 
+            name="email"
+            placeholder="Email"
+            className="form-control rounded"
+          />
+            <label htmlFor="email" className="form-label mx-2">{content.contact.msg_1}</label>
+          <ValidationError 
+            prefix="Email" 
+            field="email"
+            errors={state.errors}
+          />
+        </div>
+        
+        <div className="mb-3 form-floating">
+          <textarea
+            id="message"
+            name="message"
+            className="form-control"
+            placeholder="Message"
+          />
+          <label htmlFor="message"  className="form-label mx-2">{content.contact.msg_2}</label>
+          <ValidationError 
+            prefix="Message" 
+            field="message"
+            errors={state.errors}
+          />
+        </div>
 
-      <button type="submit" className="btn btn-primary w-25" disabled={state.submitting}>
-      {content.contact.msg_3}
-      </button>
-    </form>
+        <button className="btn-cusom btn  w-25" disabled={state.submitting}>
+          <span className='text-white'>{content.contact.msg_3}</span>
+        </button>
+      </form>
   </div>
   );
 }
