@@ -187,7 +187,8 @@
     },
     "cv": {
       "title": "CV",
-      "msg_1": "Click to see my CV."  
+      "msg_1": "Click to see my CV.",
+      "link": "cv_en.pdf"  
     },
     "contact": {
       "title": "Contact",

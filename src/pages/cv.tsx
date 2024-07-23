@@ -29,7 +29,8 @@ const Title = styled.div`
 function CV()  {   
   
   const {language} = useSelector((state: RootState) => state.lang);
-  let content = translate('page', language) as any
+
+  let content = translate('page', language) as any 
   const ROUTE = import.meta.env.VITE_ROUTE;
 
     return (
@@ -45,7 +46,7 @@ function CV()  {
           <div className="d-flex flex-column text-center">
               <div className="card mx-auto w-75">
                 <div className="text-center">
-                    <a href={`${ROUTE}/cv.pdf`} target="_blank" >
+                    <a href={`${ROUTE}/${content.cv.link}`} target="_blank" >
                         <FaRegFilePdf  fontSize={44}/>
                     <br />
                     <br />
