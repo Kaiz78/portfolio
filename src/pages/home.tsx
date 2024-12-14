@@ -33,7 +33,7 @@ const Title = styled.div`
 
 function Home()  {  
   const {language} = useSelector((state: RootState) => state.lang);  
-  let content = translate('page', language) as any
+  const content = translate('page', language) as unknown as { home: { title: string; msg_1: string; msg_2: string; msg_3: string; msg_4: string; msg_5: string; role: string[] } };
 
   const { avatar_url, name } = useSelector(selectData);
   const ROUTE = import.meta.env.VITE_ROUTE;
